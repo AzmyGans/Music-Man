@@ -22,7 +22,7 @@ from MusicMan.helpers.decorators import authorized_users_only, errors
 from MusicMan.services.callsmusic.callsmusic import client as USER
 from MusicMan.config import SUDO_USERS
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["ubotjoin"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -58,7 +58,7 @@ async def addchannel(client, message):
     )
 
 
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["ubotleave"]))
 @authorized_users_only
 async def rem(USER, message):
     try:
@@ -70,7 +70,7 @@ async def rem(USER, message):
         )
         return
     
-@Client.on_message(filters.command(["userbotleaveall"]))
+@Client.on_message(filters.command(["ubotleaveall"]))
 async def bye(client, message):
     if message.from_user.id in SUDO_USERS:
         left=0
