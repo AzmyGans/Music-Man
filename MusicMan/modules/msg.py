@@ -29,38 +29,41 @@ f"""
 """,
 
 f"""
-**Pengaturan**
+**🛠️ BAGAIMANA CARA MENGGUNAKANNYA?
 
-1. Jadikan bot sebagai admin
-2. Mulai obrolan suara / VCG
-3. Ketik `/userbotjoin` dan coba /play <nama lagu>
-× Jika Assistant Bot bergabung selamat menikmati musik, 
-× Jika Assistant Bot tidak bergabung Silahkan Tambahkan @{ASSISTANT_NAME} ke grup Anda dan coba lagi
+1. Jadikan Bot Sebagai Admin
+2. Mulai Obrolan Suara / VCG
+3. Ketik /ubotjoin Dan Coba /play 
+× Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
+× Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi
 
+🎛 PERINTAH MUSIC PLAYER UNTUK MEMUTAR LAGU
 
-**» Perintah Untuk dalam grup Member Juga Bisa :**
+× /play : link youtube atau reply ke audio file untuk memutar lagu
+× /play [judul lagu] : Untuk Memutar lagu yang Anda minta melalui youtube
+× /dplay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui deezer
+× /splay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui jio saavn
 
- × /playlist : Untuk Menampilkan daftar putar Lagu sekarang
- × /current : Untuk Menunjukkan  Lagu sekarang yang sedang diputar
- × /song <judul lagu> : Untuk Mendownload lagu di YouTube 
- × /video <judul lagu> : Untuk Mendownload Video di YouTube dengan detail
- × /vsong <judul lagu> : Untuk Mendownload Video di YouTube dengan detail
- × /deezer <judul lagu> : Untuk Mendownload lagu dari deezer 
- × /saavn <judul lagu> : Untuk Mendownload lagu dari website saavn
- × /search <judul lagu> : Untuk Mencari Video di YouTube dengan detail
+🎛 PERINTAH MUSIC PLAYER HANYA ADMIN GRUP
 
-**» Perintah Hanya Untuk Admin :**
-
-× /play <judul lagu> : Untuk Memutar lagu yang Anda minta melalui youtube
-× /play <link yt> : Untuk Memutar lagu yang Anda minta melalui link youtube
-× /play <reply ke audio> : Untuk Memutar lagu yang Anda minta melalui file audio
-× /dplay : Untuk Memutar lagu yang Anda minta melalui deezer
-× /splay : Untuk Memutar lagu yang Anda minta melalui jio saavn
 × /skip : Untuk Menskip pemutaran lagu ke Lagu berikutnya
 × /pause : Untuk Menjeda pemutaran Lagu
 × /resume : Untuk Melanjutkan pemutaran Lagu yang di pause
 × /end : Untuk Memberhentikan pemutaran Lagu
-× /userbotjoin - Untuk Mengundang asisten ke obrolan Anda
-× /admincache - Untuk MemRefresh admin list
-"""
+× /ubotjoin - Untuk Mengundang asisten ke obrolan Anda
+
+🎛 PERINTAH UNTUK DOWNLOAD LAGU ATAU VIDEO
+
+× /song [judul lagu] : Untuk Mendownload lagu di YouTube 
+× /video [judul lagu] : Untuk Mendownload Video di YouTube dengan detail
+× /deezer [judul lagu] : Untuk Mendownload lagu dari deezer 
+× /saavn [judul lagu] : Untuk Mendownload lagu dari website saavn
+
+📝 CATATAN HARAP DIBACA AGAR TIDAK TERJADI KENDALA
+
+• Untuk Menghindari Bot Error Jangan Melakukan Spam Musik Ke Dalam Antrian Sekaligus
+• Lagu Yang Melebihi Waktu 2 Jam Tidak Dapat Diputar
+• Jika Assistant Tidak Mau Naik Ke Obrolan Suara, Matiin Obrolan Suara Dan Mulai Lagi
+• Jika Assistent Tidak Bisa Di Invite, Ketik /unban @{ASSISTANT_NAME} Terus Ketik /ubotjoin Di Grup Anda 
+• Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik**"""
       ]
