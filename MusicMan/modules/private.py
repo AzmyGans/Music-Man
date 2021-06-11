@@ -22,7 +22,7 @@ from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROU
 logging.basicConfig(level=logging.INFO)
 
 @Client.on_message(
-    filters.command("start")
+    filters.command("fyfuicrryh")
     & filters.private
     & ~ filters.edited
 )
@@ -65,7 +65,7 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['hyuhiogsrtgut']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
@@ -148,7 +148,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/Lunatic0de/20"
+                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/MusicAnydlBot"
                     )
                 ]
             ]
@@ -170,7 +170,7 @@ async def reload(client: Client, message: Message):
                         "Group Support", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url=f"https://t.me/mrismanaziz"
+                        "Owner", url=f"https://t.me/{OWNER}"
                     )
                 ]
             ]
