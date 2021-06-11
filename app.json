@@ -80,6 +80,33 @@
       "description": "Batas durasi audio maksimal untuk download (minutes).",
       "required": true,
       "value": "30"
+        },
+        "AUDIO_THUMBNAIL": {
+            "description": "If you need to use custom thumbnail for audio files, get telegraph url of your thumbnail and put here. If not keep No",
+            "value": "No"
+        },
+        "VIDEO_THUMBNAIL": {
+            "description": "If you need to use custom thumbnail for video files, get telegraph url of your thumbnail and put it here. If not keep No",
+            "value": "No"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "Your channel username without @ to force users to join your channel before use the bot (You must add the bot to your channel as admin)",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
     }
   }
 }
