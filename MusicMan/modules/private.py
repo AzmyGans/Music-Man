@@ -51,9 +51,9 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                         "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{SUPPORT_GROUP}"), 
+                        "💭 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"), 
                     InlineKeyboardButton(
-                        "💭 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                        "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
                         "🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠", url=f"https://{SOURCE_CODE}")
@@ -95,10 +95,7 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '💭 sᴜᴘᴘᴏʀᴛ', url=f"https://t.me/{SUPPORT_GROUP}"), 
-             InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📢', url=f"https://t.me/{UPDATES_CHANNEL}")],
-            [InlineKeyboardButton(text = '🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠', url=f"https://{SOURCE_CODE}")],
+            
             [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")]
         ]
     else:
