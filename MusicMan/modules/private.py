@@ -32,9 +32,9 @@ async def start_(client: Client, message: Message):
 Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Group Dengan Cara Yang Mudah
 Saya Memiliki Banyak Fitur Praktis Seperti:
 ┏━━━━━━━━━━━━━━
-┣• Memutar Lagu Yang Anda Inginkan
-┣• Mendownload Lagu Yang Anda Inginkan
-┣• Mendownload Video Yang Anda Inginkan
+┣• Memutar Lagu Yang Diminta
+┣• Mendownload Lagu Yang Diminta
+┣• Mendownload Video Yang Diminta
 ┗━━━━━━━━━━━━━━
 ❃ Managed With By: {OWNER}
 ━━━━━━━━━━━━━━━
