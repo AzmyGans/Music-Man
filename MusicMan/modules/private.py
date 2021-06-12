@@ -142,7 +142,7 @@ async def about(client, message):
 
 # https://docs.pyrogram.org/start/examples/bot_keyboards
 # Reply with inline keyboard
-@Jebot.on_message(filters.private
+@Client.on_message(filters.private
                    & filters.text
                    & ~filters.edited
                    & filters.regex(YTDL_REGEX))
