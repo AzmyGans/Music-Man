@@ -21,381 +21,157 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(filters.command("start2"))
-async def start(client, message):
-   if message.chat.type == 'private':
-       await Jebot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>👋🏻 Hai, Nama Saya Adalah Music Anydl Bot 
-
-➠ Saya Dapat Memutar Lagu Di Grup Obrolan Suara Anda
-
-➠ Tekan Tombol Bantuan Di Bawah Jika Ingin Mengetahui Bagaimana Cara Menggunakan Saya
-
-➠ Tekan Tombol Donasi Di Bawah Jika Anda Ingin Berdonasi Ke Saya
-
-➠ Tekan Tombol Pencarian Di Bawah Jika Anda Ingin Mendownload Lagu Atau Video</b>""",   
-                            reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "🛠️ ʙᴀɴᴛᴜᴀɴ", callback_data="help"),
-                                        InlineKeyboardButton(
-                                            "ᴘᴇɴᴄᴀʀɪᴀɴ🔎", switch_inline_query_current_chat=""),
-                                    ],[
-                                      InlineKeyboardButton(
-                                            "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ", url="http://t.me/MusicAnydlBot?startgroup=start"),
-                                        InlineKeyboardButton(
-                                            "ᴅᴏɴᴀsɪ 🎁", callback_data="about")
-                                    ]]
-                            ),        
-            disable_web_page_preview=True,        
-            parse_mode="html")
-
-@Client.on_message(filters.command("help"))
-async def help(client, message):
-    if message.chat.type == 'private':   
-        await Jebot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>🛠️ BAGAIMANA CARA MENGGUNAKANNYA?
-
-1. Jadikan Bot Sebagai Admin
-2. Mulai Obrolan Suara / VCG
-3. Ketik /ubotjoin Dan Coba /play 
-× Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
-× Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @MusicAnydlAssistant Ke Grup Anda Dan Coba Lagi
-
-🎛 PERINTAH MUSIC PLAYER UNTUK MEMUTAR LAGU
-
-× /play : link youtube atau reply ke audio file untuk memutar lagu
-× /play [judul lagu] : Untuk Memutar lagu yang Anda minta melalui youtube
-× /dplay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui deezer
-× /splay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui jio saavn
-
-🎛 PERINTAH MUSIC PLAYER HANYA ADMIN GRUP
-
-× /skip : Untuk Menskip pemutaran lagu ke Lagu berikutnya
-× /pause : Untuk Menjeda pemutaran Lagu
-× /resume : Untuk Melanjutkan pemutaran Lagu yang di pause
-× /end : Untuk Memberhentikan pemutaran Lagu
-× /ubotjoin - Untuk Mengundang asisten ke obrolan Anda
-
-🎛 PERINTAH UNTUK DOWNLOAD LAGU ATAU VIDEO
-
-× /song [judul lagu] : Untuk Mendownload lagu di YouTube 
-× /video [judul lagu] : Untuk Mendownload Video di YouTube dengan detail
-× /deezer [judul lagu] : Untuk Mendownload lagu dari deezer 
-× /saavn [judul lagu] : Untuk Mendownload lagu dari website saavn
-
-📝 CATATAN HARAP DIBACA AGAR TIDAK TERJADI KENDALA
-
-• Untuk Menghindari Bot Error Jangan Melakukan Spam Musik Ke Dalam Antrian Sekaligus
-• Lagu Yang Melebihi Waktu 2 Jam Tidak Dapat Diputar
-• Jika Assistant Tidak Mau Naik Ke Obrolan Suara, Matiin Obrolan Suara Dan Mulai Lagi
-• Jika Assistent Tidak Bisa Di Invite, Ketik /unban @MusicAnydlAssistant Terus Ketik /ubotjoin Di Grup Anda 
-• Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik</b>""",
-        reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "⬅️ ᴋᴇᴍʙᴀʟɪ", callback_data="start"),
-                                        InlineKeyboardButton(
-                                            "ᴘᴇɴᴄᴀʀɪᴀɴ🔎", switch_inline_query_current_chat=""),
-                                  ],[
-                                        InlineKeyboardButton(
-                                            "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ", url="http://t.me/MusicAnydlBot?startgroup=start"),
-                                        InlineKeyboardButton(
-                                            "ᴅᴏɴᴀsɪ 🎁", callback_data="about")
-                                    ]]
-                            ),        
-            disable_web_page_preview=True,        
-            parse_mode="html")
-
-@Client.on_message(filters.command("about"))
-async def about(client, message):
-    if message.chat.type == 'private':   
-        await Jebot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>Dukungan Music Anydl Bot!</b>
-
-<b>Dikelola Oleh:</b> <a href="https://t.me/GB_03101999">ɢᴏᴏᴅ ʙᴏʏs</a>
-
-<b>Donasi Pulsa:</b> `089525658633`
-
-<b>Donasi E-Wallet:</b> <a href="https://saweria.co/DonasiUntukAdmin">sᴀᴡᴇʀɪᴀ</a>
-
-<b>Saya Ucapkan Terimakasih</b>""",
-     reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "⬅️ ᴋᴇᴍʙᴀʟɪ", callback_data="help"),
-                                        InlineKeyboardButton(
-                                            "ᴘᴇɴᴄᴀʀɪᴀɴ🔎", switch_inline_query_current_chat=""),
-                                  ],[
-                                        InlineKeyboardButton(
-                                            "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ", url="http://t.me/MusicAnydlBot?startgroup=start"),
-                                        InlineKeyboardButton(
-                                            "ᴍᴀɪɴ ᴍᴇɴᴜ 📚", callback_data="start")
-                                    ]]
-                            ),        
-            disable_web_page_preview=True,        
-            parse_mode="html")
-
-
-# https://docs.pyrogram.org/start/examples/bot_keyboards
-# Reply with inline keyboard
-@Client.on_message(filters.private
-                   & filters.text
-                   & ~filters.edited
-                   & filters.regex(YTDL_REGEX))
-async def ytdl_with_button(c: Client, message: Message):
-    if Config.UPDATES_CHANNEL is not None:
-        try:
-            user = await c.get_chat_member(Config.UPDATES_CHANNEL, message.chat.id)
-            if user.status == "kicked":
-                await c.send_message(
-                    chat_id=message.chat.id,
-                    text="Maaf, Anda Dilarang Menggunakan Saya. Hubungi [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999).",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
-        except UserNotParticipant:
-            await c.send_message(
-                chat_id=message.chat.id,
-                text="**Untuk Menggunakan Fitur Ini Anda Harus Bergabung Di Grup Saya**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("ᴊᴏɪɴ ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ᴀɴʏᴅʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
-                        ]
-                    ]
-                ),
-                parse_mode="markdown"
-            )
-            return
-        except Exception:
-            await c.send_message(
-                chat_id=message.chat.id,
-                text="Something went Wrong. Contact my [Support Group](https://t.me/InfinityBots_Support).",
-                parse_mode="markdown",
-                disable_web_page_preview=True)
-            return
+@Client.on_message(
+    filters.command("start")
+    & filters.private
+    & ~ filters.edited
+)
+async def start_(client: Client, message: Message):
     await message.reply_text(
-        "**Silahkan Pilih Metode Download**",
+        f"""<b>┗┓ Haii {message.from_user.first_name} Nama Saya Adalah {PROJECT_NAME} ┏┛\n
+Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Group Dengan Cara Yang Mudah
+Saya Memiliki Banyak Fitur Praktis Seperti:
+┏━━━━━━━━━━━━━━
+┣• Memutar Lagu Yang Anda Inginkan
+┣• Mendownload Lagu Yang Anda Inginkan
+┣• Mendownload Video Yang Anda Inginkan
+┗━━━━━━━━━━━━━━
+❃ Managed With By: {OWNER}
+━━━━━━━━━━━━━━━
+Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
+</b>""",
+
+# Edit Yang Perlu Lu ganti 
+# Tapi Jangan di Hapus Thanks To nya Yaaa :D
+
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎵 ᴀᴜᴅɪᴏ",
-                        callback_data="ytdl_audio"
+                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                [
+                    InlineKeyboardButton(
+                        "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{SUPPORT_GROUP}"), 
+                    InlineKeyboardButton(
+                        "💭 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                ],[
+                    InlineKeyboardButton(
+                        "🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠", url=f"https://{SOURCE_CODE}")
+                ]
+            ]
+        ),
+        reply_to_message_id=message.message_id
+        )
+
+@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+def _help(client, message):
+    client.send_message(chat_id = message.chat.id,
+        text = tr.HELP_MSG[1],
+        parse_mode="markdown",
+        disable_web_page_preview=True,
+        disable_notification=True,
+        reply_markup = InlineKeyboardMarkup(map(1)),
+        reply_to_message_id = message.message_id
+    )
+
+help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
+
+@Client.on_callback_query(help_callback_filter)
+def help_answer(client, callback_query):
+    chat_id = callback_query.from_user.id
+    disable_web_page_preview=True
+    message_id = callback_query.message.message_id
+    msg = int(callback_query.data.split('+')[1])
+    client.edit_message_text(chat_id=chat_id,    message_id=message_id,
+        text=tr.HELP_MSG[msg],    reply_markup=InlineKeyboardMarkup(map(msg))
+    )
+
+
+def map(pos):
+    if(pos==1):
+        button = [
+            [InlineKeyboardButton(text = 'ʙᴇʀɪᴋᴜᴛɴʏᴀ ➡️', callback_data = "help+2")]
+        ]
+    elif(pos==len(tr.HELP_MSG)-1):
+        url = f"https://t.me/{SUPPORT_GROUP}"
+        button = [
+            [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '💭 sᴜᴘᴘᴏʀᴛ', url=f"SUPPORT_GROUP}"),
+             InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📢', url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton(text = '🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")]
+        ]
+    else:
+        button = [
+            [
+                InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'ʙᴇʀɪᴋᴜᴛɴʏᴀ ➡️', callback_data = f"help+{pos+1}")
+            ],
+        ]
+    return button
+
+
+@Client.on_message(
+    filters.command("start")
+    & filters.group
+    & ~ filters.edited
+)
+async def start(client: Client, message: Message):
+    await message.reply_text(
+        "💁🏻‍♂️ **Apakah Anda ingin mencari Link YouTube?**",
+        reply_markup=InlineKeyboardMarkup(
+            [   
+                [    
+                    InlineKeyboardButton(
+                        "✅ ʏᴀ", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "ᴠɪᴅᴇᴏ 🎬",
-                        callback_data="ytdl_video"
+                        "ᴛɪᴅᴀᴋ ❌ ", callback_data="close"
+                    )
+                ]
+            ]
+        )
+    )
+
+
+@Client.on_message(
+    filters.command("help")
+    & filters.group
+    & ~ filters.edited
+)
+async def help(client: Client, message: Message):
+    await message.reply_text(
+        """**Klik Tombol Dibawah Untuk Melihat Cara Menggunakan Bot**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "📜 ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ 📜", url="https://telegra.ph/Command-Telegram-Music-06-12"
                     )
                 ]
             ]
         ),
-        quote=True
-    )
+    )  
 
 
-@Client.on_callback_query(filters.regex("^ytdl_audio$"))
-async def callback_query_ytdl_audio(_, callback_query):
-    try:
-        url = callback_query.message.reply_to_message.text
-        ydl_opts = {
-            'format': 'bestaudio',
-            'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
-            'writethumbnail': True
-        }
-        with YoutubeDL(ydl_opts) as ydl:
-            message = callback_query.message
-            await message.reply_chat_action("typing")
-            info_dict = ydl.extract_info(url, download=False)
-            # download
-            await callback_query.edit_message_text("**Downloading audio...**")
-            ydl.process_info(info_dict)
-            # upload
-            audio_file = ydl.prepare_filename(info_dict)
-            task = asyncio.create_task(send_audio(message, info_dict,
-                                                  audio_file))
-            while not task.done():
-                await asyncio.sleep(3)
-                await message.reply_chat_action("upload_document")
-            await message.reply_chat_action("cancel")
-            await message.delete()
-    except Exception as e:
-        await message.reply_text(e)
-    await callback_query.message.reply_to_message.delete()
-    await callback_query.message.delete()
-
-
-if Config.AUDIO_THUMBNAIL == "No":
-   async def send_audio(message: Message, info_dict, audio_file):
-       basename = audio_file.rsplit(".", 1)[-2]
-       # .webm -> .weba
-       if info_dict['ext'] == 'webm':
-           audio_file_weba = basename + ".weba"
-           os.rename(audio_file, audio_file_weba)
-           audio_file = audio_file_weba
-       # thumbnail
-       thumbnail_url = info_dict['thumbnail']
-       thumbnail_file = basename + "." + \
-           get_file_extension_from_url(thumbnail_url)
-       # info (s2tw)
-       webpage_url = info_dict['webpage_url']
-       title = s2tw(info_dict['title'])
-       caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
-       duration = int(float(info_dict['duration']))
-       performer = s2tw(info_dict['uploader'])
-       await message.reply_audio(audio_file, caption=caption, duration=duration,
-                              performer=performer, title=title,
-                              parse_mode='HTML', thumb=thumbnail_file)
-       os.remove(audio_file)
-       os.remove(thumbnail_file)
-
-else:
-    async def send_audio(message: Message, info_dict, audio_file):
-       basename = audio_file.rsplit(".", 1)[-2]
-       # .webm -> .weba
-       if info_dict['ext'] == 'webm':
-           audio_file_weba = basename + ".weba"
-           os.rename(audio_file, audio_file_weba)
-           audio_file = audio_file_weba
-       # thumbnail
-       lol = Config.AUDIO_THUMBNAIL
-       thumbnail_file = wget.download(lol)
-       # info (s2tw)
-       webpage_url = info_dict['webpage_url']
-       title = s2tw(info_dict['title'])
-       caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
-       duration = int(float(info_dict['duration']))
-       performer = s2tw(info_dict['uploader'])
-       await message.reply_audio(audio_file, caption=caption, duration=duration,
-                              performer=performer, title=title,
-                              parse_mode='HTML', thumb=thumbnail_file)
-       os.remove(audio_file)
-       os.remove(thumbnail_file)
-
-@Client.on_callback_query(filters.regex("^ytdl_video$"))
-async def callback_query_ytdl_video(_, callback_query):
-    try:
-        # url = callback_query.message.text
-        url = callback_query.message.reply_to_message.text
-        ydl_opts = {
-            'format': 'best[ext=mp4]',
-            'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
-            'writethumbnail': True
-        }
-        with YoutubeDL(ydl_opts) as ydl:
-            message = callback_query.message
-            await message.reply_chat_action("typing")
-            info_dict = ydl.extract_info(url, download=False)
-            # download
-            await callback_query.edit_message_text("**Downloading video...**")
-            ydl.process_info(info_dict)
-            # upload
-            video_file = ydl.prepare_filename(info_dict)
-            task = asyncio.create_task(send_video(message, info_dict,
-                                                  video_file))
-            while not task.done():
-                await asyncio.sleep(3)
-                await message.reply_chat_action("upload_document")
-            await message.reply_chat_action("cancel")
-            await message.delete()
-    except Exception as e:
-        await message.reply_text(e)
-    await callback_query.message.reply_to_message.delete()
-    await callback_query.message.delete()
-
-if Config.VIDEO_THUMBNAIL == "No":
-   async def send_video(message: Message, info_dict, video_file):
-      basename = video_file.rsplit(".", 1)[-2]
-      # thumbnail
-      thumbnail_url = info_dict['thumbnail']
-      thumbnail_file = basename + "." + \
-          get_file_extension_from_url(thumbnail_url)
-      # info (s2tw)
-      webpage_url = info_dict['webpage_url']
-      title = s2tw(info_dict['title'])
-      caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
-      duration = int(float(info_dict['duration']))
-      width, height = get_resolution(info_dict)
-      await message.reply_video(
-          video_file, caption=caption, duration=duration,
-          width=width, height=height, parse_mode='HTML',
-          thumb=thumbnail_file)
-
-      os.remove(video_file)
-      os.remove(thumbnail_file)
-
-else:
-   async def send_video(message: Message, info_dict, video_file):
-      basename = video_file.rsplit(".", 1)[-2]
-      # thumbnail
-      lel = Config.VIDEO_THUMBNAIL
-      thumbnail_file = wget.download(lel)
-      # info (s2tw)
-      webpage_url = info_dict['webpage_url']
-      title = s2tw(info_dict['title'])
-      caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
-      duration = int(float(info_dict['duration']))
-      width, height = get_resolution(info_dict)
-      await message.reply_video(
-          video_file, caption=caption, duration=duration,
-          width=width, height=height, parse_mode='HTML',
-          thumb=thumbnail_file)
-
-      os.remove(video_file)
-      os.remove(thumbnail_file)
-
-def get_file_extension_from_url(url):
-    url_path = urlparse(url).path
-    basename = os.path.basename(url_path)
-    return basename.split(".")[-1]
-
-
-def get_resolution(info_dict):
-    if {"width", "height"} <= info_dict.keys():
-        width = int(info_dict['width'])
-        height = int(info_dict['height'])
-    # https://support.google.com/youtube/answer/6375112
-    elif info_dict['height'] == 1080:
-        width = 1920
-        height = 1080
-    elif info_dict['height'] == 720:
-        width = 1280
-        height = 720
-    elif info_dict['height'] == 480:
-        width = 854
-        height = 480
-    elif info_dict['height'] == 360:
-        width = 640
-        height = 360
-    elif info_dict['height'] == 240:
-        width = 426
-        height = 240
-    return (width, height)
-
-
-@Client.on_callback_query()
-async def button(bot, update):
-      cb_data = update.data
-      if "help" in cb_data:
-        await update.message.delete()
-        await help(bot, update.message)
-      elif "about" in cb_data:
-        await update.message.delete()
-        await about(bot, update.message)
-      elif "start" in cb_data:
-        await update.message.delete()
-        await start(bot, update.message)
-
-print(
-    """
-Bot Started!
-Join @Infinity_BOTs
-"""
+@Client.on_message(
+    filters.command("reload")
+    & filters.group
+    & ~ filters.edited
 )
+async def reload(client: Client, message: Message):
+    await message.reply_text("""✅ Bot **Berhasil Dimulai Ulang!**\n\n• **Daftar Admin** Telah **Diperbarui**""",
+      reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"
+                    ),
+                    InlineKeyboardButton(
+                        "ᴏᴡɴᴇʀ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ]
+            ]
+        )
+   )
 
-Jebot.run()
