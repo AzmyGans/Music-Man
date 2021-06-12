@@ -21,7 +21,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-@Jebot.on_message(filters.command("start2"))
+@Client.on_message(filters.command("start2"))
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
