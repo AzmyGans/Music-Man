@@ -277,7 +277,7 @@ else:
        os.remove(audio_file)
        os.remove(thumbnail_file)
 
-@Jebot.on_callback_query(filters.regex("^ytdl_video$"))
+@Client.on_callback_query(filters.regex("^ytdl_video$"))
 async def callback_query_ytdl_video(_, callback_query):
     try:
         # url = callback_query.message.text
@@ -378,7 +378,7 @@ def get_resolution(info_dict):
     return (width, height)
 
 
-@Jebot.on_callback_query()
+@Client.on_callback_query()
 async def button(bot, update):
       cb_data = update.data
       if "help" in cb_data:
