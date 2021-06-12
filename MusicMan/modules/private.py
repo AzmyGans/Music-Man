@@ -21,13 +21,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-YTDL_REGEX = (r"^((?:https?:)?\/\/)"
-              r"?((?:www|m)\.)"
-              r"?((?:youtube\.com|youtu\.be|xvideos\.com|pornhub\.com"
-              r"|xhamster\.com|xnxx\.com))"
-              r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$")
-s2tw = OpenCC('s2tw.json').convert
-
 @Jebot.on_message(filters.command("start2"))
 async def start(client, message):
    if message.chat.type == 'private':
