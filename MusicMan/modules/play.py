@@ -539,7 +539,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{SUPPORT_GROUP}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -579,7 +579,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{SUPPORT_GROUP}"),
                 ],
                 [InlineKeyboardButton(text="🗑 ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -704,7 +704,7 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{SUPPORT_GROUP}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -827,7 +827,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{SUPPORT_GROUP}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
