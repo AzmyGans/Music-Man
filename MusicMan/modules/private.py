@@ -21,17 +21,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-import os
-import asyncio
-from urllib.parse import urlparse
-from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from youtube_dl import YoutubeDL
-from opencc import OpenCC
-from config import Config
-import wget
-
 Jebot = Client(
    "AnyDL Bot",
    api_id=Config.APP_ID,
