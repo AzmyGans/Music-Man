@@ -96,8 +96,8 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             
-            [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")]
-             InlineKeyboardButton(text = ."ᴘᴇɴᴄᴀʀɪᴀɴ 🔎", switch_inline_query_current_chat=""),
+            [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}"),]
+            [InlineKeyboardButton(text = ."ᴘᴇɴᴄᴀʀɪᴀɴ 🔎", switch_inline_query_current_chat="")]
         ]
     else:
         button = [
