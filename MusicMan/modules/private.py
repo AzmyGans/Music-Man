@@ -96,7 +96,7 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ Tambahkan saya ke Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '💭 sᴜᴘᴘᴏʀᴛ', url=f"SUPPORT_GROUP}"),
+            [InlineKeyboardButton(text = '💭 sᴜᴘᴘᴏʀᴛ', url=f"https://t.me/{SUPPORT_GROUP}"), 
              InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📢', url=f"https://t.me/{UPDATES_CHANNEL}")],
             [InlineKeyboardButton(text = '🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠', url=f"https://{SOURCE_CODE}")],
             [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")]
