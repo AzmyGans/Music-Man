@@ -97,6 +97,7 @@ def map(pos):
         button = [
             
             [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")]
+             InlineKeyboardButton(text = ."ᴘᴇɴᴄᴀʀɪᴀɴ 🔎", switch_inline_query_current_chat=""),
         ]
     else:
         button = [
@@ -120,7 +121,7 @@ async def start(client: Client, message: Message):
             [   
                 [    
                     InlineKeyboardButton(
-                        "✅ ʏᴀ", switch_inline_query_current_chat=""
+                        "✅ ʏᴀ", switch_inline_query_current_chat=""),
                     ),
                     InlineKeyboardButton(
                         "ᴛɪᴅᴀᴋ ❌ ", callback_data="close"
