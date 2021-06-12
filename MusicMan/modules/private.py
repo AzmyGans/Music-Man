@@ -21,13 +21,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-Jebot = Client(
-   "AnyDL Bot",
-   api_id=Config.APP_ID,
-   api_hash=Config.API_HASH,
-   bot_token=Config.TG_BOT_TOKEN,
-)
-
 YTDL_REGEX = (r"^((?:https?:)?\/\/)"
               r"?((?:www|m)\.)"
               r"?((?:youtube\.com|youtu\.be|xvideos\.com|pornhub\.com"
