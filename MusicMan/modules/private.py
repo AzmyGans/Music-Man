@@ -97,9 +97,9 @@ def map(pos):
         button = [
             
             [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}"),]
-             InlineKeyboardButton(
+                    InlineKeyboardButton(
                         "ᴘᴇɴᴄᴀʀɪᴀɴ🔎", switch_inline_query_current_chat=""
-                    )
+                    ),
         ]
     else:
         button = [
