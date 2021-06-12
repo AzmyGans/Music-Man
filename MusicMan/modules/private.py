@@ -21,11 +21,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(
-    filters.command("start")
-    & filters.private
-    & ~ filters.edited
-)
+@Client.on_message(filters.command("start2"))
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
@@ -55,7 +51,7 @@ async def start(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("help"))
+@Client.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
@@ -113,7 +109,7 @@ async def help(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("about"))
+@Client.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
