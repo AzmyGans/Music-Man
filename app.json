@@ -1,5 +1,5 @@
 {
-  "name": "Music Man",
+  "name": "Music Anydl",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/mrismanaziz/Music-Man",
@@ -30,17 +30,17 @@
     "SUPPORT_GROUP": {
       "description": "Grup dukungan MusicPlayer Anda tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "SharingUserbot"
+      "value": "GB_BorutoID"
     },
     "UPDATES_CHANNEL": {
       "description": "Updates Channel tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "Lunatic0de"
+      "value": "GroupMusicAnydl"
     }, 
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
-      "value": "Music-Man"
+      "value": "Music Anydl Bot"
     },
     "ASSISTANT_NAME": {
       "description": "Username Telegram asisten MusicPlayer Anda tanpa @.",
@@ -49,15 +49,17 @@
     "OWNER": {
       "description": "Masukan Nama atau Username Telegram",
       "required": true
+      "value": "[ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)"
     },
     "ARQ_API_KEY": {
       "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
       "required": true
+      "value": "MKAWOC-MJTKAJ-OUBMSP-IBYPZP-ARQ"
     },    
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
       "required": false,
-      "value": "https://telegra.ph/file/cd0b87484429704c7b935.png"
+      "value": "https://telegra.ph/file/697a37d0cfe3879705c0a.png"
     },        
     "API_ID": {
       "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
@@ -74,7 +76,7 @@
     "DURATION_LIMIT": {
       "description": "Batas durasi audio maksimal untuk download (minutes).",
       "required": true,
-      "value": "30"
+      "value": "120"
     }
   }
 }
