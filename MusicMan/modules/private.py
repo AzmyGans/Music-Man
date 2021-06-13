@@ -55,8 +55,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                     InlineKeyboardButton(
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
-                    InlineKeyboardButton(
-                        "🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠", url=f"https://{SOURCE_CODE}")
+                    InlineKeyboardButton(text = 'ʙᴀɴᴛᴜᴀɴ ᴅᴀɴ ᴘᴇʀɪɴᴛᴀʜ', callback_data = f"help+{pos-1}")
                 ]
             ]
         ),
@@ -166,7 +165,7 @@ async def reload(client: Client, message: Message):
                         "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "ᴏᴡɴᴇʀ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"
                     )
                 ]
             ]
