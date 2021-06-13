@@ -49,12 +49,12 @@
     "OWNER": {
       "description": "Masukan Nama atau Username Telegram",
       "required": true
-      "value": "[ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)"
+      "value"; "[ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)"
     },
     "ARQ_API_KEY": {
       "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
       "required": true
-      "value": "MKAWOC-MJTKAJ-OUBMSP-IBYPZP-ARQ"
+      "value"; "MKAWOC-MJTKAJ-OUBMSP-IBYPZP-ARQ"
     },    
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
