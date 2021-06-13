@@ -1,8 +1,8 @@
 {
-  "name": "Music Man",
+  "name": "Music Anydl Bot",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/mrismanaziz/Music-Man",
+  "repository": "https://github.com/t03b10t99/Music-Man",
   "stack": "container",
   "buildpacks": [
    {
@@ -49,12 +49,10 @@
     "OWNER": {
       "description": "Masukan Nama atau Username Telegram",
       "required": true
-      "value" "[ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)"
     },
     "ARQ_API_KEY": {
       "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
       "required": true
-      "value" "MKAWOC-MJTKAJ-OUBMSP-IBYPZP-ARQ"
     },    
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
