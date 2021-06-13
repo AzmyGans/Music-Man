@@ -36,7 +36,7 @@ from youtube_search import YoutubeSearch
 from MusicMan.config import ARQ_API_KEY
 from MusicMan.config import BOT_NAME as bn
 from MusicMan.config import DURATION_LIMIT
-from MusicMan.config import SUPPORT_GROUP as supporsgroup
+from MusicMan.config import UPDATES_CHANNEL as updateschannel
 from MusicMan.config import que
 from MusicMan.function.admins import admins as a
 from MusicMan.helpers.admins import get_administrators
@@ -539,7 +539,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{supporsgroup}"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -579,7 +579,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{supporsgroup}"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
                 [InlineKeyboardButton(text="🗑 ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -704,7 +704,7 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{supporsgroup}"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -827,7 +827,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{supporsgroup}"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
