@@ -51,11 +51,6 @@ Get pyrogram (p)  `SESSION` from here:
 - `/admincache` - Refresh admin list
 
 
-#### Pmpermit
-- `.yes` - approove someone to pm you
-- `.no` - disapproove someone to pm you
-+ Sudo Users can execute any command in any groups
-
 ### Credits
 Don't edit this part
 
