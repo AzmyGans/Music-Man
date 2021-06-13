@@ -56,7 +56,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "ʙᴀɴᴛᴜᴀɴ ᴅᴀɴ ᴘᴇʀɪɴᴛᴀʜ", callback_data="help+{pos-1}")
+                        "🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠", url=f"https://github.com/t03b10t99/Music-Man")
                 ]
             ]
         ),
