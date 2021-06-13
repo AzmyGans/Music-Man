@@ -55,7 +55,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                     InlineKeyboardButton(
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
-                    InlineKeyboardButton(text = 'ʙᴀɴᴛᴜᴀɴ ᴅᴀɴ ᴘᴇʀɪɴᴛᴀʜ', callback_data = f"help+{pos-1}")
+                    [InlineKeyboardButton(text = 'ʙᴀɴᴛᴜᴀɴ ᴅᴀɴ ᴘᴇʀɪɴᴛᴀʜ', callback_data = f"help+{pos-1}")]
                 ]
             ]
         ),
