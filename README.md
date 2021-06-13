@@ -52,7 +52,6 @@ Get pyrogram (p)  `SESSION` from here:
 
 
 ### Credits
-Don't edit this part
 
 #### Special Credits
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
