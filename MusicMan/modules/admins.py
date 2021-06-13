@@ -48,7 +48,7 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("**❌ Tidak ada pemutaran musik untuk dijeda**")
+        await message.reply_text("**❌ Tidak ada pemutaran lagu untuk dijeda**")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
         await message.reply_text("**⏸ Menjeda lagu**")
@@ -62,7 +62,7 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("**❌ Tidak ada musik yang sedang dijeda**")
+        await message.reply_text("**❌ Tidak ada lagu yang sedang dijeda**")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
         await message.reply_text("**▶️ Melanjutkan pemutaran lagu yang dijeda**")
@@ -74,7 +74,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("**❌ Tidak ada musik yang sedang diputar**")
+        await message.reply_text("**❌ Tidak ada lagu yang sedang diputar**")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -92,7 +92,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("**❌ Tidak ada musik di antrian untuk dilewati**")
+        await message.reply_text("**❌ Tidak ada lagu di antrian untuk dilewati**")
     else:
         callsmusic.queues.task_done(chat_id)
 
@@ -103,7 +103,7 @@ async def skip(_, message: Message):
                 chat_id, callsmusic.queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("*⏭ Anda telah melompat ke lagu berikutnya**")
+        await message.reply_text("**⏭ Anda telah melompat ke lagu berikutnya**")
 
 
 @Client.on_message(filters.command("admincache"))
