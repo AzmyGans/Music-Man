@@ -119,7 +119,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((205, 550), f"Judul: {title}", (51, 215, 255), font=font)
-    draw.text((205, 590), f"Duration: {duration}", (255, 255, 255), font=font)
+    draw.text((205, 590), f"Durasi: {duration}", (255, 255, 255), font=font)
     draw.text((205, 630), f"Dilihat: {views}", (255, 255, 255), font=font)
     draw.text(
         (205, 670),
@@ -145,7 +145,7 @@ async def playlist(client, message):
     by = temp[0][1].mention(style="md")
     msg = "**Lagu Yang Sedang dimainkan** di {}".format(message.chat.title)
     msg += "\n• " + now_playing
-    msg += "\n• Req by " + by
+    msg += "\n• Permintaan Dari " + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
@@ -598,8 +598,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status Musik:** antrian `{position}`\n" \
-                    + f"**🎧 Permintaan:** {message.from_user.mention}",
+            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `antrian ke {position}`\n" \
+                    + f"**🎧 PERMINTAAN:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -619,8 +619,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status Musik:** memutar\n" \
-                    + f"**🎧 Permintaan:** {message.from_user.mention}",
+            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `diputar`\n" \
+                    + f"**🎧 PERMINTAAN:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
