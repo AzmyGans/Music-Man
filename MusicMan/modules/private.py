@@ -29,15 +29,16 @@ logging.basicConfig(level=logging.INFO)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>┗┓ Haii {message.from_user.first_name} Nama Saya Adalah {PROJECT_NAME} ┏┛\n
-Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Group Dengan Cara Yang Mudah
-Saya Memiliki Banyak Fitur Praktis Seperti:
+Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Dengan Cara Yang Mudah
+Saya Memiliki Banyak Fitur Praktis Seperti
 ┏━━━━━━━━━━━━━━
-┣• Memutar Lagu Yang
+┣• Memutar Lagu
 ┣• Mendownload Lagu
 ┣• Mendownload Video
+┣• Mencari Link Youtube
 ┗━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━
-┣• Dikelolah: {OWNER}
+┣• Dikelolah Oleh: {OWNER}
 ┗━━━━━━━━━━━━━━━
 Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
 </b>""",
@@ -122,7 +123,7 @@ async def start(client: Client, message: Message):
                         "✅ ʏᴀ", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "ᴛɪᴅᴀᴋ ❌ ", callback_data="close"
+                        "ᴛɪᴅᴀᴋ ❌ ", callback_data="cls"
                     )
                 ]
             ]
