@@ -32,17 +32,15 @@ async def start_(client: Client, message: Message):
 Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Group Dengan Cara Yang Mudah
 Saya Memiliki Banyak Fitur Praktis Seperti:
 ┏━━━━━━━━━━━━━━
-┣• Memutar Lagu Yang Diminta
-┣• Mendownload Lagu Yang Diminta
-┣• Mendownload Video Yang Diminta
-┗━━━━━━━━━━━━━━
-❃ Managed With By: {OWNER}
-━━━━━━━━━━━━━━━
+┣• Memutar Lagu Yang
+┣• Mendownload Lagu
+┣• Mendownload Video
+┗━━━━━━━━━━━━━━━
+┏━━━━━━━━━━━━━━━
+┣• Dikelolah: {OWNER}
+┗━━━━━━━━━━━━━━━
 Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
 </b>""",
-
-# Edit Yang Perlu Lu ganti 
-# Tapi Jangan di Hapus Thanks To nya Yaaa :D
 
         reply_markup=InlineKeyboardMarkup(
             [
