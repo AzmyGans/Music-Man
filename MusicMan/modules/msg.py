@@ -33,7 +33,7 @@ f"""
 
 1. Jadikan Bot Sebagai Admin
 2. Mulai Obrolan Suara / VCG
-3. Ketik /ubotjoin di grup anda
+3. Ketik /ubotjoin Di Grup Anda
 × Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
 × Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi
 
