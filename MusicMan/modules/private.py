@@ -28,8 +28,8 @@ logging.basicConfig(level=logging.INFO)
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>┗┓ Haii {message.from_user.first_name} Nama Saya Adalah {PROJECT_NAME} ┏┛\n
-Saya Bot Music Group, Yang Dapat Memutar Lagu Di Voice Chat Dengan Cara Yang Mudah
+        f"""<b>👋🏻 Haii {message.from_user.first_name} Nama Saya Adalah {PROJECT_NAME}\n
+Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Lagu Di Obrolan Suara Grup Telegram
 Saya Memiliki Banyak Fitur Praktis Seperti
 ┏━━━━━━━━━━━━━━
 ┣• Memutar Lagu
