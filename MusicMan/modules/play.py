@@ -154,7 +154,7 @@ async def playlist(client, message):
             name = song[0]
             usr = song[1].mention(style="md")
             msg += f"\n• {name}"
-            msg += f"\n• Req by {usr}\n"
+            msg += f"\n• Permintaan Dari {usr}\n"
     await message.reply_text(msg)
 
 
