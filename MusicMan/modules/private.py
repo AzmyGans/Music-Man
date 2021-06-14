@@ -56,7 +56,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🛠", url=f"https://github.com/t03b10t99/Music-Man")
+                        "🔍 sᴇᴀʀᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ 🔎", switch_inline_query_current_chat=""),
                 ]
             ]
         ),
@@ -164,9 +164,6 @@ async def reload(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        "ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"
                     )
                 ]
             ]
