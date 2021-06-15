@@ -2,7 +2,7 @@
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@MusikManbot](https://t.me/MusikManbot)
+### Available on telegram as [@MusicAnydlBot](https://t.me/MusicAnydlBot)
 
 <h2> Features 🔥 </h2>
 
