@@ -15,7 +15,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
+from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,DURATION_LIMIT OWNER
 class Messages():
       HELP_MSG = [
         ".",
@@ -44,6 +44,12 @@ f"""
 × /dplay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui deezer
 × /splay [judul lagu] : Untuk Memutar lagu yang Anda minta melalui jio saavn
 
+🎛 PERINTAH TAMBAHAN
+
+× /playlist - Tampilkan sekarang daftar putar
+× /current - Tampilkan sekarang bermain
+× /search [judul lagu]- cari url youtube dengan detail
+
 🎛 PERINTAH ADMIN GRUP
 
 × /skip : Untuk Menskip pemutaran lagu ke Lagu berikutnya
@@ -62,7 +68,7 @@ f"""
 📝 CATATAN AGAR TIDAK TERJADI KENDALA
 
 • Untuk Menghindari Bot Error Jangan Melakukan Spam Musik Ke Dalam Antrian Sekaligus
-• Lagu Yang Melebihi Waktu 2 Jam Tidak Dapat Diputar
+• Lagu Yang Melebihi Waktu {DURATION_LIMIT} Menit Tidak Dapat Diputar
 • Jika Assistant Tidak Mau Naik Ke Obrolan Suara, Matiin Obrolan Suara Dan Mulai Lagi
 • Jika Assistent Tidak Bisa Di Invite, Ketik /unban @{ASSISTANT_NAME} Terus Ketik /ubotjoin Di Grup Anda 
 • Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik**"""
