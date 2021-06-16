@@ -55,7 +55,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+"),
+                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help-1"),
                     InlineKeyboardButton(
                         "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
                 ],[
@@ -100,8 +100,7 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             
-            [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}"),
-             InlineKeyboardButton(text = 'ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin")],
+            [InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}")],
         ]
     else:
         button = [
