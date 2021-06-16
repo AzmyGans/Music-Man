@@ -55,7 +55,7 @@ Gunakan Perintah » /help « Untuk Mengetahui Fitur Lengkap Saya
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help-1"),
+                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+1"),
                     InlineKeyboardButton(
                         "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
                 ],[
