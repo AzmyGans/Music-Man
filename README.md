@@ -46,8 +46,8 @@ Get pyrogram (p)  `SESSION` from here:
 - `/resume` - resume song play
 - `/skip` - play next song
 - `/end` - stop music play
-- `/userbotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
+- `/ubotjoin` - invite assistant to your chat
+- `/ubotleave` - remove assistant from your chat
 - `/admincache` - Refresh admin list
 
 
