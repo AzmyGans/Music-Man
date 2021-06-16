@@ -28,6 +28,10 @@ Get pyrogram (p)  `SESSION` from here:
 ### Commands for Group 🛠
 #### For all in group
 
+- `/play <song name>` - play song you requested
+- `/play <reply to audio>` - play replied file
+- `/dplay <song name>` - play song you requested via deezer
+- `/splay <song name>` - play song you requested via jio saavn
 - `/playlist` - Show now playing list
 - `/current` - Show now playing
 - `/song <song name>` - download songs you want quickly
@@ -37,10 +41,6 @@ Get pyrogram (p)  `SESSION` from here:
 - `/video <song name>` - download videos you want quickly
 
 #### Admins only.
-- `/play <song name>` - play song you requested
-- `/play <reply to audio>` - play replied file
-- `/dplay <song name>` - play song you requested via deezer
-- `/splay <song name>` - play song you requested via jio saavn
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
