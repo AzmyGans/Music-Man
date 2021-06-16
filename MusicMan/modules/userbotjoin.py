@@ -88,7 +88,7 @@ async def bye(client, message):
         await client.send_message(message.chat.id, f"Left {left} chats. Failed {failed} chats.")
     
     
-@Client.on_message(filters.command(["userbotjoinchannel","ubjoinc"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["ubotjoinchannel","ubjoinc"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addcchannel(client, message):
