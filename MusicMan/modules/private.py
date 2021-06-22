@@ -39,7 +39,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti
 ┏━━━━━━━━━━━━━━━
 ┣• Dikelolah Oleh: {OWNER}
 ┗━━━━━━━━━━━━━━━
-Tekan Tombol Bantuan Dibawah untuk mengetahui Fitur Lengkap Saya
+Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
 </b>""",
 
         reply_markup=InlineKeyboardMarkup(
