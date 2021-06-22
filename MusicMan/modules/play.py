@@ -457,7 +457,7 @@ async def play(_, message: Message):
     message.from_user.id
     message.from_user.first_name
     text_links=None
-    await lel.edit("**🔄 Sedang Memproses Memutar**")
+    await lel.edit("**🔍 Sedang Mencari Lagu**")
     message.from_user.id
     if message.reply_to_message:
         entities = []
