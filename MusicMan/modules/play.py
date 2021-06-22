@@ -512,7 +512,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("**🔄 Sedang Memproses Lagu**")
+        await lel.edit("**🔍 Sedang Mencari Lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -552,7 +552,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("**🔄 Sedang Memproses Memutar Lagu**")
+        await lel.edit("**🔄 Sedang Memproses Lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -619,7 +619,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `diputar`\n" \
+            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `memutar`\n" \
                     + f"**🎧 PERMINTAAN:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
