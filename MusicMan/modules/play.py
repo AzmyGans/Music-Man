@@ -582,8 +582,8 @@ async def play(_, message: Message):
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=f"{dlurl}"),
                 ],
                 [InlineKeyboardButton(text="🗑 ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -602,7 +602,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian ke {position}`\n" \
+            caption = f"**🏷 Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian ke {position}`\n" \
                     + f"**🎧 Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
@@ -623,7 +623,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang memutar`\n" \
+            caption = f"**🏷 Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang memutar`\n" \
                     + f"**🎧 Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
