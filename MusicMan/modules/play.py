@@ -120,10 +120,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((205, 550), f"Judul: {title}", (51, 215, 255), font=font)
     draw.text((205, 590), f"Durasi: {duration}", (255, 255, 255), font=font)
-    draw.text((205, 630), f"Dilihat: {views}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Penonton: {views}", (255, 255, 255), font=font)
     draw.text(
         (205, 670),
-        f"Permintaan: {requested_by}",
+        f"Permintaan Dari: {requested_by}",
         (255, 255, 255),
         font=font,
     )
@@ -512,7 +512,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("**🔍 Sedang Mencari Lagu**")
+        await lel.edit("**🎵 Lagu Ditemukan**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -581,6 +581,10 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicAnydl"),
                 ],
+                [
+                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
+                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                ],
                 [InlineKeyboardButton(text="🗑 ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
@@ -598,8 +602,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `antrian ke {position}`\n" \
-                    + f"**🎧 PERMINTAAN:** {message.from_user.mention}",
+            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian ke {position}`\n" \
+                    + f"**🎧 Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -619,8 +623,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 JUDUL:** [{title[:60]}]({url})\n⏱ **DURASI:** {duration}\n💡 **STATUS:** `memutar`\n" \
-                    + f"**🎧 PERMINTAAN:** {message.from_user.mention}",
+            caption = f"**🏷 Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang memutar`\n" \
+                    + f"**🎧 Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
