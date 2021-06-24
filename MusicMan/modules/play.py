@@ -603,7 +603,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"**🏷 Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian ke {position}`\n" \
-                    + f"**🎧 Permintaan:** {message.from_user.mention}",
+                    + f"**🎧 Permintaan:** {message.from_user.first_name}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -623,8 +623,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"**🏷 Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang memutar`\n" \
-                    + f"**🎧 Permintaan:** {message.from_user.mention}",
+            caption = f"**🏷 Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang dimainkan`\n" \
+                    + f"**🎧 Permintaan:** {message.from_user.first_name}",
                    reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
