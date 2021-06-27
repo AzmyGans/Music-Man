@@ -450,7 +450,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("ytplay") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -504,11 +504,11 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     text_links=None
-    await lel.edit("🔄 **Sedang Mencari Lagu**")
+    await lel.edit("🔎 **Sedang Mencari Lagu**")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -601,7 +601,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Sedang Memproses Lagu**")
+        await lel.edit("🔄 **Sedang Memproses Lagu**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -669,6 +669,10 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
+                [
+                    InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=f"{dlurl}"),
+                ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
@@ -686,7 +690,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian Ke {position}`\n" \
                     + f"🎧 **Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
@@ -705,7 +709,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang dimainkan`\n" \
                     + f"🎧 **Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard)
 
@@ -713,7 +717,7 @@ async def play(_, message: Message):
     return await lel.delete()
 
 
-@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("play") & filters.group & ~filters.edited)
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -766,7 +770,7 @@ async def ytplay(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     await lel.edit("🔎 **Sedang Mencari Lagu**")
@@ -778,7 +782,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 **Sedang Memproses Lagu**")
+    await lel.edit("🔄 **Sedang Memproses Lagu**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -807,6 +811,10 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
+                [
+                    InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=f"{dlurl}"),
+                ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
@@ -824,7 +832,7 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `antrian Ke {position}`\n" \
                     + f"🎧 **Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard,
         )
@@ -846,7 +854,7 @@ async def ytplay(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** `sedang dimainkan`\n" \
                     + f"🎧 **Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
@@ -905,7 +913,7 @@ async def deezer(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     requested_by = message_.from_user.first_name
