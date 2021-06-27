@@ -541,7 +541,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -588,7 +589,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -671,7 +673,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -813,7 +816,8 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
