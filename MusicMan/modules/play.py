@@ -590,6 +590,10 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
+                [
+                    InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=f"{dlurl}"),
+                ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
