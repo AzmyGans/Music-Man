@@ -105,10 +105,7 @@ def map(pos):
                     url=f"https://t.me/{UPDATES_CHANNEL}",
                 ),
             ],
-            [
-                InlineKeyboardButton(
-                    text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}"
-                ),
+            [InlineKeyboardButton(text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}")],
                 InlineKeyboardButton(
                     text='ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin"
                 )
