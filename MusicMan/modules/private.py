@@ -29,16 +29,9 @@ logging.basicConfig(level=logging.INFO)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>👋🏻 Haii {message.from_user.mention} Nama Saya Adalah {PROJECT_NAME}\n
-Saya Memiliki Banyak Fitur Praktis Seperti
-┏━━━━━━━━━━━━━━━━━━━━
-┣• Memutar Lagu
-┣• Mendownload Lagu
-┣• Mendownload Video
-┣• Mencari Link Youtube
-┗━━━━━━━━━━━━━━━━━━━━
-┏━━━━━━━━━━━━━━━━━━━━
-┣• Dikelolah Oleh: {OWNER}
-┗━━━━━━━━━━━━━━━━━━━━
+Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Telegram.
+
+Dikelolah Oleh: {OWNER}
 Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
 </b>""",
 
