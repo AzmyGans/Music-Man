@@ -106,7 +106,6 @@ def map(pos):
                 ),
             ],
             [
-
                 InlineKeyboardButton(
                     text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}"
                 ),
@@ -114,7 +113,6 @@ def map(pos):
                     text='ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin"
                 )
         ]
-
     else:
         button = [
             [
