@@ -57,5 +57,6 @@ f"""
 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Telegram.
 
 Dikelolah Oleh: {OWNER}
-Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya**"""
+Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya**
+"""
       ]
