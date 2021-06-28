@@ -20,15 +20,6 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**👋🏻 Hai Selamat Datang Kembali Di {PROJECT_NAME}
-
-✣️ {PROJECT_NAME} dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.
-
-✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik berikutnya untuk instruksi**
-
-""",
-
-f"""
 **CARA MENGGUNAKAN BOT
 1. Jadikan Bot Sebagai Admin
 2. Mulai Obrolan Suara / VCG
@@ -57,5 +48,14 @@ CATATAN AGAR TIDAK TERJADI KENDALA
 • Untuk Menghindari Bot Error Jangan Melakukan Spam Musik Ke Dalam Antrian Sekaligus
 • Lagu Yang Melebihi Waktu 120 Menit Tidak Dapat Diputar
 • Jika Assistant Tidak Mau Naik Ke Obrolan Suara, Matiin Obrolan Suara Dan Mulai Lagi 
-• Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik**"""
+• Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik**
+
+""",
+
+f"""
+**👋🏻 Haii {message.from_user.mention} Nama Saya Adalah {PROJECT_NAME}\n
+Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Telegram.
+
+Dikelolah Oleh: {OWNER}
+Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya**"""
       ]
