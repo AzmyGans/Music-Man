@@ -451,6 +451,7 @@ async def m_cb(b, cb):
 
 
 @Client.on_message(command("ytplay") & other_filters)
+@errors
 async def play(_, message: Message):
     global que
     global useer
@@ -725,6 +726,7 @@ async def play(_, message: Message):
 
 
 @Client.on_message(filters.command("play") & filters.group & ~filters.edited)
+@errors
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
