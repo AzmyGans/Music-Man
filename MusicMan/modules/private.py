@@ -30,15 +30,15 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "📲 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "Support 💬", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "👤 Owner 👤", url=f"https://t.me/GB_03101999")
+                        "❓Help & Command❓", callback_data = f"help+1")
                 ]
             ]
         ),
@@ -88,22 +88,21 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'Next ➡️', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
+            [InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '📲 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = 'Support 💬', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '👤 Owner 👤', url=f"https://t.me/GB_03101999")],
-            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '⬅️ Previous', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '⬅️ Previous', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'Next ➡️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
