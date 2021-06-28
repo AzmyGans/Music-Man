@@ -48,9 +48,7 @@ Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+1"),
-                    InlineKeyboardButton(
-                        "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
+                        "🛠 ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ 🛠", callback_data = "help+1"),
                 ]
             ]
         ),
@@ -84,7 +82,7 @@ def help_answer(client, callback_query):
 def map(pos):
     if (pos==1):
         return [
-            [InlineKeyboardButton(text = 'Next »', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'ᴋᴇᴍʙᴀʟɪ', callback_data = "help+2")]
         ]
     elif pos==len(tr.HELP_MSG)-1:
         url = f"https://t.me/{SUPPORT_GROUP}"
@@ -105,10 +103,7 @@ def map(pos):
                     url=f"https://t.me/{UPDATES_CHANNEL}",
                 ),
             ],
-            [InlineKeyboardButton(text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}")],
-                InlineKeyboardButton(
-                    text='ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin"
-                )
+            [InlineKeyboardButton(text='🛠 ᴄᴀʀᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ 🛠', callback_data=f"help+{pos-1}")],
         ]
 
     else:
