@@ -32,8 +32,6 @@ async def start_(client: Client, message: Message):
 Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Telegram.
 
 Dikelolah Oleh: {OWNER}
-
-Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
 </b>""",
 
         reply_markup=InlineKeyboardMarkup(
