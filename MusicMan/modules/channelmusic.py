@@ -461,10 +461,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
+                [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -553,10 +553,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -687,10 +687,10 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(url))
@@ -817,10 +817,10 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(slink))
