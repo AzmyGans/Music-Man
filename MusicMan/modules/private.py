@@ -57,9 +57,6 @@ Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
                         "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+1"),
                     InlineKeyboardButton(
                         "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
-                ],[
-                    InlineKeyboardButton(
-                        "🔍 sᴇᴀʀᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ 🔎", switch_inline_query_current_chat=""),
                 ]
             ]
         ),
