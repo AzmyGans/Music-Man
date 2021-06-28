@@ -113,14 +113,14 @@ def map(pos):
                     text='ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin"
                 )
         ]
+
     else:
-        button = [
+        return [
             [
-                InlineKeyboardButton(text = '⬅️', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '➡️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '➡️', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '⬅️', callback_data = f"help+{pos+1}")
             ],
         ]
-    return button
 
 
 @Client.on_message(
