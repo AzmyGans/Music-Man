@@ -40,7 +40,7 @@ Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
                         "💭 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"), 
@@ -82,27 +82,37 @@ def help_answer(client, callback_query):
 
 
 def map(pos):
-    if(pos==1):
-        button = [
-            [InlineKeyboardButton(text = 'ᴋᴇᴍʙᴀʟɪ', callback_data = "help+2")]
+    if (pos==1):
+        return [
+            [InlineKeyboardButton(text = 'Next »', callback_data = "help+2")]
         ]
-    elif(pos==len(tr.HELP_MSG)-1):
+    elif pos==len(tr.HELP_MSG)-1:
         url = f"https://t.me/{SUPPORT_GROUP}"
-        button = [
-            
-            InlineKeyboardButton(
-                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
-                ],[
-                    InlineKeyboardButton(
-                        "💭 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"), 
-                    InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
-                ],[
-                    InlineKeyboardButton(
-                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+{pos-1}"),
-                    InlineKeyboardButton(
-                        "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
+        return [
+            [
+                InlineKeyboardButton(
+                    "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴏᴜᴘ ➕",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text='💬 sᴜᴘᴘᴏʀᴛ',
+                    url=f"https://t.me/{SUPPORT_GROUP}",
+                ),
+                InlineKeyboardButton(
+                    text='ᴄʜᴀɴɴᴇʟ 📢',
+                    url=f"https://t.me/{UPDATES_CHANNEL}",
+                ),
+
+                InlineKeyboardButton(
+                    text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}")"
+                ),
+                InlineKeyboardButton(
+                    text='ᴅᴏɴᴀsɪ 🎁', url=f"https://saweria.co/DonasiUntukAdmin"
+                )
         ]
+
     else:
         button = [
             [
