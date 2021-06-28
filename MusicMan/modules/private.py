@@ -104,6 +104,8 @@ def map(pos):
                     text='ᴄʜᴀɴɴᴇʟ 📢',
                     url=f"https://t.me/{UPDATES_CHANNEL}",
                 ),
+            ],
+            [
 
                 InlineKeyboardButton(
                     text='⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data=f"help+{pos-1}")"
