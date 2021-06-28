@@ -20,35 +20,9 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-<b>CARA MENGGUNAKAN BOT
-1. Jadikan Bot Sebagai Admin
-2. Mulai Obrolan Suara / VCG
-3. Ketik /ubotjoin Untuk Mengundang Assistant
-• Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
-• Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi
-
-PERINTAH UNTUK SEMUA MEMBER GROUP
-• /play (judul lagu) : Untuk Memutar lagu yang Anda minta melalui youtube
-• /dplay (judul lagu) : Untuk Memutar lagu yang Anda minta melalui deezer
-• /splay (judul lagu) : Untuk Memutar lagu yang Anda minta melalui jio saavn
-• /ytplay (judul lagu) : Untuk Memutar lagu yang Anda minta melalui youtube dengan lebih detail
-• /search (judul lagu) : cari url youtube dengan detail
-• /playlist : Tampilkan sekarang daftar putar
-• /current : Tampilkan sekarang bermain
-
-PERINTAH UNTUK SEMUA ADMIN GROUP
-• /player : menampilkan panel pemutaran
-• /skip : Untuk Menskip pemutaran lagu ke Lagu berikutnya
-• /pause : Untuk Menjeda pemutaran Lagu
-• /resume : Untuk Melanjutkan pemutaran Lagu yang di pause
-• /end : Untuk Memberhentikan pemutaran Lagu
-• /ubotjoin : Untuk Mengundang asisten ke obrolan Anda
-
-CATATAN AGAR TIDAK TERJADI KENDALA
-• Untuk Menghindari Bot Error Jangan Melakukan Spam Musik Ke Dalam Antrian Sekaligus
-• Lagu Yang Melebihi Waktu 120 Menit Tidak Dapat Diputar
-• Jika Assistant Tidak Mau Naik Ke Obrolan Suara, Matiin Obrolan Suara Dan Mulai Lagi 
-• Itu Saja Pesan Dari Saya Terimakasih, Selamat Bermusik</b>
+**Hai Selamat datang kembali di {PROJECT_NAME}
+✣️ {PROJECT_NAME} dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah.
+✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
 
 """,
 
@@ -59,5 +33,6 @@ Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Te
 
 Dikelolah Oleh: {OWNER}
 
-Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya</b>""",
+Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya</b>
+"""
       ]
