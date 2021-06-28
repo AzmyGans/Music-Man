@@ -20,10 +20,11 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**👋🏻 Haii {message.from_user.mention} Nama Saya Adalah {PROJECT_NAME}\n
-Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Telegram.
+**👋🏻 Hai Selamat Datang Kembali Di {PROJECT_NAME}
 
-Dikelolah Oleh: {OWNER}**
+✣️ {PROJECT_NAME} dapat Memutar Lagu Di Voice Chat Group Dengan cara yang Mudah.
+
+✣️ Assistant Music » @{ASSISTANT_NAME}\n\nKlik Next untuk instruksi**
 
 """,
 
