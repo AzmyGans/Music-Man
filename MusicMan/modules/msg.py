@@ -59,5 +59,5 @@ Saya adalah bot canggih yang dibuat untuk memutar musik di obrolan suara Grup Te
 Dikelolah Oleh: {OWNER}
 
 Tekan Tombol Bantuan Untuk Mengetahui Fitur Lengkap Saya**
-"""
+""",
       ]
