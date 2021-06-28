@@ -99,15 +99,15 @@ def map(pos):
                         "ᴄʜᴀɴɴᴇʟ 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+{pos-1}")],
+                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = "help+{pos-1}"),
                     InlineKeyboardButton(
                         "ᴅᴏɴᴀsɪ 🎁", url=f"https://saweria.co/DonasiUntukAdmin")
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '⬅️ ᴋᴇᴍʙᴀʟɪ', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'ʙᴇʀɪᴋᴜᴛɴʏᴀ ➡️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '⬅️', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '➡️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
