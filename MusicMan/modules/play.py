@@ -591,11 +591,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ ᴘᴜᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -678,10 +676,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -824,10 +820,8 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
