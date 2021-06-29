@@ -38,7 +38,7 @@ def _start(client, message):
                         "Support 💬", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "❓Help & Command❓", callback_data = f"help+1")
+                        "❓ Help & Command ❓", callback_data = f"help+1")
                 ]
             ]
         ),
@@ -96,7 +96,7 @@ def map(pos):
             [InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📲 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = 'Support 💬', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '⬅️ Previous', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '❓ Help & Command ❓', callback_data = f"help+1")]
         ]
     else:
         button = [
