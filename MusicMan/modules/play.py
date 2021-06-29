@@ -457,7 +457,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Sedang Memproses Lagu**")
+    lel = await message.reply("🔄 **Sedang Memproses**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -542,8 +542,10 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                ],
+                [
+                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -563,7 +565,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Sedang Memproses Lagu**")
+        await lel.edit("🎵 **Sedang Memproses**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -590,8 +592,10 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                ],
+                [
+                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -674,8 +678,10 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                ],
+                [
+                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -731,7 +737,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Sedang Memproses Lagu**")
+    lel = await message.reply("🔄 **Sedang Memproses**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -818,8 +824,10 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ɢʀᴜᴘ", url="https://t.me/GroupMusicRandom"),
                     InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                ],
+                [
+                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -876,7 +884,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 **Sedang Memproses Lagu**")
+    lel = await message_.reply("🔄 **Sedang Memproses**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1022,7 +1030,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("🔄 **Sedang Memproses Lagu**")
+    await cb.message.edit("🔄 **Sedang Memproses**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
