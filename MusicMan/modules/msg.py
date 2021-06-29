@@ -108,5 +108,5 @@ Pengguna Sudo Dapat Menjalankan Perintah Apa Pun Di Grup Mana Pun‌‌
 f"""
 **👋🏻 Hai [{}](tg://user?id={})**\n\n🤖 Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999) \n\n
 
-"""
+""",
       ]
