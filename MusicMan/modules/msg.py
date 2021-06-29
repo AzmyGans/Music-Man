@@ -102,14 +102,6 @@ f"""
  • /userbotleaveall - Hapus Asisten Dari Semua Obrolan
  • /gcast - Pesan Balasan Brodcast Global Ke Semua Obrolan
 Pengguna Sudo Dapat Menjalankan Perintah Apa Pun Di Grup Mana Pun‌‌
-""",
-
-f"""
-**👋🏻 Hai [{}](tg://user?id={})**
-
-🤖 Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram
-
-🧑🏻‍💻 Dikelolah oleh: [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)
 
 """
       ]
