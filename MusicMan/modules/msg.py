@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "**👋🏻 Hai [{}](tg://user?id={})**\n\n🤖Saya adalah bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999 \n\n"
+      START_MSG = "**👋🏻 Hai [{}](tg://user?id={})**\n\n🤖 Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999) \n\n"
       HELP_MSG = [
         ".",
 f"""
@@ -25,15 +25,15 @@ f"""
 
 ⚪️ {PROJECT_NAME} Dapat Memutar Musik Di Obrolan Suara Grup Anda Serta Obrolan Suara Saluran
 
-⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\Klik next Untuk Info Lebih Lanjut**
+⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\nKlik next Untuk Info Lebih Lanjut**
 """,
 
 f"""
-**Pengaturan**
+**🛠️ Pengaturan**
 
 1) Jadikan Bot Sebagai Admin
 2) Mulai Obrolan Suara / Vcg
-3) Kirim /userbotjoin
+3) Kirim Perintah /userbotjoin
 • Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
 • Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi
 
@@ -42,7 +42,7 @@ f"""
 2) Kirim /userbotjoinchannel Di Grup Tertaut
 3) Sekarang Kirim Perintah Di Grup Tertaut
 
-**⚪ Perintah**
+**🔰 Perintah 🔰**
 
 **=>> Memutar Lagu 🎧**
 
