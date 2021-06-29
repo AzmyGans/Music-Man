@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "**👋🏻 Hello [{}](tg://user?id={})**\n\n🤖Saya adalah bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: {OWNER}\n\n"
+      START_MSG = "**👋🏻 Hai [{}](tg://user?id={})**\n\n🤖Saya adalah bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: {OWNER}\n\n"
       HELP_MSG = [
         ".",
 f"""
