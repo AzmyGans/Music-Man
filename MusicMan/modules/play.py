@@ -505,7 +505,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/userbotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     text_links=None
@@ -542,10 +542,12 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton("🎵 ɢʀᴏᴜᴘ ᴍᴜsɪᴄ ʀᴀɴᴅᴏᴍ 🎵", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=f"{dlurl}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -591,9 +593,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ ᴘᴜᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("ᴍᴇɴᴜ ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -627,8 +629,8 @@ async def play(_, message: Message):
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ **Durasi** - {results[j]['duration']}\n"
-                toxxt += f" ├ **Penonton** - {results[j]['views']}\n"
-                toxxt += f" └ **Saluran** - {results[j]['channel']}\n\n"
+                toxxt += f" ├ **Dilihat** - {results[j]['views']}\n"
+                toxxt += f" └ **Channel** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -677,7 +679,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -781,7 +783,7 @@ async def ytplay(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/userbotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     await lel.edit("🔎 **Sedang Mencari Lagu**")
@@ -821,7 +823,7 @@ async def ytplay(_, message: Message):
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
                     InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("ᴍᴇɴᴜ ⏯", callback_data="menu"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 ʏᴏᴜᴛᴜʙᴇ", url=f"{url}"),
@@ -925,7 +927,7 @@ async def deezer(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/ubotjoin` Untuk mengundang assistent ke dalam grup</i>"
+            f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/unban @{ASSISTANT_NAME}` Kemudian kirim perintah `/userbotjoin` Untuk mengundang assistent ke dalam grup</i>"
         )
         return
     requested_by = message_.from_user.first_name
@@ -961,7 +963,8 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
@@ -1002,7 +1005,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"🎼️ **Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
+        caption=f"▶️ **Sedang Memutar Lagu** [{title}]({url}) **Via Deezer**",
     )
     os.remove("final.png")
 
@@ -1059,7 +1062,8 @@ async def lol_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
-                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("ᴘᴜᴛᴀʀ ⏯", callback_data="menu"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ʜᴀᴘᴜs 🗑️", callback_data="cls")],
             ]
