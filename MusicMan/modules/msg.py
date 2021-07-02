@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "**👋🏻 Hai [{}](tg://user?id={})**\n\n🤖 Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram.‌‌\n\n🧑🏻‍💻 Dikelolah oleh: [ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999) \n\n"
+      START_MSG = "**👋🏻 Hai [{}](tg://user?id={})**\n\n🤖 Saya Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup & Saluran Telegram"
       HELP_MSG = [
         ".",
 f"""
@@ -25,7 +25,7 @@ f"""
 
 ⚪️ {PROJECT_NAME} Dapat Memutar Musik Di Obrolan Suara Grup Anda Serta Obrolan Suara Saluran
 
-⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\nKlik next Untuk Info Lebih Lanjut**
+⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\nKlik Selanjutnya Untuk Info Lebih Lanjut**
 """,
 
 f"""
@@ -41,8 +41,9 @@ f"""
 1) Jadikan Bot Sebagai Admin Saluran
 2) Kirim /userbotjoinchannel Di Grup Tertaut
 3) Sekarang Kirim Perintah Di Grup Tertaut
-
-**🔰 Perintah 🔰**
+""",
+f"""
+**🔰 Perintah**
 
 **=>> Memutar Lagu 🎧**
 
@@ -63,7 +64,7 @@ f"""
 
 Semua Perintah Bisa Digunakan Kecuali Perintah /player /skip /pause /resume  /end Hanya Untuk Admin Grup
 """,
-        
+
 f"""
 **=>> Saluran Music Play 🛠**
 
@@ -96,12 +97,34 @@ f"""
 - /musicplayer [on/off]: Aktifkan/Nonaktifkan Pemutar Musik
 - /admincache: Memperbarui Info Admin Grup Anda. Coba Jika Bot Tidak Mengenali Admin
 - /userbotjoin: Undang @{ASSISTANT_NAME} Userbot Ke Grup Anda
+""",
+f"""
+**=>> Lagu Download 📥**
 
-**=>> Perintah untuk Pengguna Sudo ️ ⚔️**
+- /vsong [nama lagu]: Download video dari youtube
+- /song [nama lagu]: Download audio dari youtube
+- /saavn [nama lagu]: Download lagu dari saavn
+- /deezer [nama lagu]: Download lagu dari deezer
 
- • /userbotleaveall - Hapus Asisten Dari Semua Obrolan
- • /gcast - Pesan Balasan Brodcast Global Ke Semua Obrolan
-Pengguna Sudo Dapat Menjalankan Perintah Apa Pun Di Grup Mana Pun‌‌
+**=>> Alat Pencarian 🔍**
+
+- /search [nama lagu]: Cari youtube untuk lagu
+- /lyrics [nama lagu]: Dapatkan lirik lagu‌‌
+""",
+
+f"""
+**=>>Perintah untuk sudo ️⚔**
+
+ • /userbotleaveall - hapus asisten dari semua obrolan
+ • /broadcast <balas pesan> - brodcast global membalas pesan ke semua obrolan
+
+
+**=>> Catatan 📝**
+
+• untuk menghindari bot error jangan melakukan spam musik ke dalam antrian sekaligus
+• lagu yang melebihi waktu 60 menit tidak dapat diputar
+• jika assistant tidak mau naik ke obrolan suara, matiin obrolan suara dan mulai lagi 
+• itu saja pesan dari saya terimakasih, selamat bermusik
 
 """
       ]
