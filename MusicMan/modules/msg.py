@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "👋🏻 Hallo [{}](tg://user?id={}), Nama saya [Music Anydl Bot(https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈────────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload music\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈────────────────────┈\n☑️ Klik tombol bantuan untuk info lebih lanjut"
+      START_MSG = "👋🏻 Hallo [{}](tg://user?id={}), Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈────────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload music\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈────────────────────┈\n☑️ Klik tombol bantuan untuk info lebih lanjut"
       HELP_MSG = [
         ".",
 f"""
