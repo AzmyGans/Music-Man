@@ -92,16 +92,17 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = 'Support 💬', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '⬅️ Previous', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}")],
+            [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
+             InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '⬅️ Previous', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'Next ➡️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'Selanjutnya ➡️', callback_data = f"help+{pos+1}")],
+               [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
+                InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")
             ],
         ]
     return button
