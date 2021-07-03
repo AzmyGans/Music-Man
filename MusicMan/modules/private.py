@@ -92,7 +92,8 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}")],
+            [InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}")
+             InlineKeyboardButton(tect = "Tambahkan ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
              InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")
         ]
@@ -100,9 +101,7 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'Selanjutnya ➡️', callback_data = f"help+{pos+1}")],
-               [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
-                InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")
+                InlineKeyboardButton(text = 'Selanjutnya ➡️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
