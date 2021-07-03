@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "👋🏻 Hallo, Nama saya [{}](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)\nDikekolah oleh {}\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload lagu\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut"
+      START_MSG = "👋🏻 Hallo, Nama saya [{PROJECT_NAME}](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)\nDikekolah oleh {OWNER}\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload lagu\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut"
       HELP_MSG = [
         ".",
 f"""
