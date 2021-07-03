@@ -25,7 +25,6 @@ logging.basicConfig(level=logging.INFO)
 def _start(client, message):
     client.send_message(message.chat.id,
         text=tr.START_MSG.
-        parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
