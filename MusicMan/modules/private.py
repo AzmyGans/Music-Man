@@ -95,7 +95,7 @@ def map(pos):
             [InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}"),
              InlineKeyboardButton(text = 'Tambahkan ➕', url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
-             InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")
+             InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")]
         ]
     else:
         button = [
