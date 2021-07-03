@@ -17,7 +17,7 @@
 import os
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
-      START_MSG = "👋🏻 Hallo [{}](tg://user?id={}), Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload music\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut"
+      START_MSG = "👋🏻 Hallo, Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload lagu\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut"
       HELP_MSG = [
         ".",
 f"""
@@ -99,7 +99,17 @@ f"""
 - /userbotjoin: Undang @{ASSISTANT_NAME} Userbot Ke Grup Anda
 """,
 f"""
-👋🏻 Hallo [{}](tg://user?id={}), Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload music\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut
+👋🏻 Hallo, Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!
+Dikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)
+┈───────────────────┈
+☑️ Saya memiliki banyak fitur untuk anda yang suka lagu
+🔘 Memutar lagu di group 
+🔘 Mendownload lagu
+🔘 Mendownload video
+🔘 Mencari link youtube
+🔘 Mencari lirik lagu
+┈───────────────────┈
+☑️ Klik tombol bantuan untuk informasi lebih lanjut
 
 """
       ]
