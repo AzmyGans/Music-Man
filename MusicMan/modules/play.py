@@ -124,12 +124,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((205, 550), f"Title: {title}", (51, 215, 255), font=font)
-    draw.text((205, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((205, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((205, 550), f"Judul: {title}", (51, 215, 255), font=font)
+    draw.text((205, 590), f"Durasi: {duration}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Dilihat: {views}", (255, 255, 255), font=font)
     draw.text(
         (205, 670),
-        f"Added By: {requested_by}",
+        f"Permintaan: {requested_by}",
         (255, 255, 255),
         font=font,
     )
@@ -308,7 +308,6 @@ async def p_cb(b, cb):
 @Client.on_callback_query(
     filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
 )
-@cb_admin_check
 async def m_cb(b, cb):
     global que
     if (
@@ -531,15 +530,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -596,15 +591,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -630,8 +621,8 @@ async def play(_, message: Message):
 
             for j in range(5):
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ **Duration** - {results[j]['duration']}\n"
-                toxxt += f" ├ **Views** - {results[j]['views']}\n"
+                toxxt += f" ├ **Durasi** - {results[j]['duration']}\n"
+                toxxt += f" ├ **Dilihat** - {results[j]['views']}\n"
                 toxxt += f" └ **Channel** - {results[j]['channel']}\n\n"
 
             koyboard = InlineKeyboardMarkup(
@@ -689,15 +680,11 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -842,15 +829,11 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -983,15 +966,10 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton(text="🎬 Tonton Di Deezer🎬", url=f"{url}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -1122,15 +1100,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -1234,15 +1204,7 @@ async def lol_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
