@@ -99,32 +99,7 @@ f"""
 - /userbotjoin: Undang @{ASSISTANT_NAME} Userbot Ke Grup Anda
 """,
 f"""
-**=>> Lagu Download 📥**
-
-- /vsong [nama lagu]: Download video dari youtube
-- /song [nama lagu]: Download audio dari youtube
-- /saavn [nama lagu]: Download lagu dari saavn
-- /deezer [nama lagu]: Download lagu dari deezer
-
-**=>> Alat Pencarian 🔍**
-
-- /search [nama lagu]: Cari youtube untuk lagu
-- /lyrics [nama lagu]: Dapatkan lirik lagu‌‌
-""",
-
-f"""
-**=>>Perintah untuk sudo ️⚔**
-
- • /userbotleaveall - hapus asisten dari semua obrolan
- • /broadcast <balas pesan> - brodcast global membalas pesan ke semua obrolan
-
-
-**=>> Catatan 📝**
-
-• untuk menghindari bot error jangan melakukan spam musik ke dalam antrian sekaligus
-• lagu yang melebihi waktu 60 menit tidak dapat diputar
-• jika assistant tidak mau naik ke obrolan suara, matiin obrolan suara dan mulai lagi 
-• itu saja pesan dari saya terimakasih, selamat bermusik
+👋🏻 Hallo [{}](tg://user?id={}), Nama saya [Music Anydl Bot](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)!\nDikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)\n┈───────────────────┈\n☑️ Saya memiliki banyak fitur untuk anda yang suka lagu\n🔘 Memutar lagu di group \n🔘 Mendownload music\n🔘 Mendownload video\n🔘 Mencari link youtube\n🔘 Mencari lirik lagu\n┈───────────────────┈\n☑️ Klik tombol bantuan untuk informasi lebih lanjut
 
 """
       ]
