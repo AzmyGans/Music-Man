@@ -99,7 +99,7 @@ f"""
 - /userbotjoin: Undang @{ASSISTANT_NAME} Userbot Ke Grup Anda
 """,
 f"""
-👋🏻 Hallo, Nama saya [Music Anydl](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)
+👋🏻 Hallo {}, Nama saya [Music Anydl](https://telegra.ph/file/1729991b1d59a686b3b9d.jpg)
 Dikekolah oleh [ɢᴏᴏᴅ ʙᴏʏs](t.me/GB_03101999)
 ┈───────────────────┈
 ☑️ Saya memiliki banyak fitur untuk anda yang suka lagu
