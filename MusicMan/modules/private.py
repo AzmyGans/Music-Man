@@ -21,10 +21,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL,BOT_USERNAME, OWNER
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
-def _start(client, message):
-    client.send_message(message.chat.id,
-        text=tr.START_MSG.
+
+@Client.on_message(
+    filters.command("start")
+    & filters.private
+    & ~ filters.edited
+)
+async def start_(client: Client, message: Message):
+    await message.reply_text(
+        f"""
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
