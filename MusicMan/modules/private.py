@@ -30,15 +30,14 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add Me To Your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "⚔️ Bantuan", callback_data = f"help+1"),
+                    InlineKeyboardButton(
+                        "Tambahkan ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📲 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "👥 Group", url=f"https://t.me/{SUPPORT_GROUP}"), 
                     InlineKeyboardButton(
-                        "Support 💬", url=f"https://t.me/{SUPPORT_GROUP}")
-                ],[
-                    InlineKeyboardButton(
-                        "❓ Help & Command ❓", callback_data = f"help+1")
+                        "Channel 📣", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ]
             ]
         ),
@@ -88,7 +87,7 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = 'Next ➡️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'Next ➡️', callback_data = "help+{pos-1}")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
