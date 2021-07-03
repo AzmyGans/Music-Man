@@ -207,7 +207,6 @@ async def p_cb(b, cb):
 @Client.on_callback_query(
     filters.regex(pattern=r"^(cplay|cpause|cskip|cleave|cpuse|cresume|cmenu|ccls)$")
 )
-@cb_admin_check
 async def m_cb(b, cb):
     global que
     if (
@@ -450,15 +449,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -515,15 +506,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -571,15 +554,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -711,15 +686,7 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Deezer", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
@@ -847,15 +814,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="🎬 Youtube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
-                ],
-                [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/GroupMusicRandom"),
-                    InlineKeyboardButton("Owner 🧑🏻‍💻", url="https://t.me/GB_03101999"),
+                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
                 ],
                 [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
             ]
