@@ -89,6 +89,17 @@ f"""
 4) Tambahkan @{ASSISTANT_NAME} Ke Saluran Sebagai admin.
 5) Cukup Kirim Perintah Di Grup Anda
 """,
+f"""
+**==>>Download Lagu 📥**
+• /vsong [nama lagu]: Download video lagu dari youtube
+• /song [nama lagu]: Unduh audio lagu dari youtube
+• /saavn [nama lagu]: Unduh lagu dari saavn
+• /deezer [nama lagu]: Unduh lagu dari deezer
+
+**==>>Alat Pencarian 🔍**
+• /search [nama lagu]: Cari youtube untuk lagu
+• /lyrics [nama lagu]: Dapatkan lirik lagu
+""" ,
 
 f"""
 **=>> Lebih Banyak Alat 🧑‍🔧**
