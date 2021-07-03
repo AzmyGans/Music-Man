@@ -96,9 +96,6 @@ def song(client, message):
     except Exception as e:
         print(e)
 
-ARQ_API_KEY = "http://35.240.133.234:8000"
-arq = ARQ(ARQ_API_KEY)
-
 
 def get_text(message: Message) -> [None, str]:
     text_to_return = message.text
