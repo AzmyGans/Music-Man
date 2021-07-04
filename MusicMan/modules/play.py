@@ -1229,7 +1229,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎧 **Permintaan:** {message.from_user.mention}",
+                    + f"🎧 **Permintaan:** {r_by.mention}",
                    reply_markup=keyboard,
         )
     else:
@@ -1249,7 +1249,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎧 **Permintaan:** {message.from_user.mention}",
+                    + f"🎧 **Permintaan:** {r_by.mention}",
                     reply_markup=keyboard,
         )
 
