@@ -1,37 +1,10 @@
 <h2 align="centre">Music Anydl Bot</h2>
 
-### ☑️ Saya memiliki banyak fitur untuk anda yang suka lagu
-### 🔘 Memutar lagu di group 
-### 🔘 Mendownload lagu
-### 🔘 Mendownload video
-### 🔘 Mencari link youtube
-### 🔘 Mencari lirik lagu
+### Bot: [@MusicAnydlBot](https://t.me/MusicAnydlBot)
 
 <p align="center">
   <img src="https://telegra.ph/file/6821d304091f7a2c8032d.jpg">
 </p>
-
-### 🔰 Perintah
-
-### =>> Memutar Lagu 🎧
-
-- `/play` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
-- `/dplay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui deezer
-- `/splay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui jio saavn
-- `/ytplay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube tanpa pilihan
-
-### =>> Pemutaran ⏯
-
-- `/player`: Buka menu Pengaturan pemain
-- `/skip`: Melewati trek saat ini
-- `/pause`: Jeda trek
-- `/resume`: Melanjutkan trek yang dijeda
-- `/end`: ​​Menghentikan pemutaran media
-- `/current`: Menampilkan trek yang sedang diputar
-- `/playlist`: Menampilkan daftar putar
-
-### ☑️ Semua Perintah Bisa Digunakan Kecuali Perintah `/player /skip /pause /resume  /end` Hanya Untuk Admin Grup
-
 ## 🚀 Deployment
 
 ### 💜 Heroku
