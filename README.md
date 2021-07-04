@@ -3,7 +3,7 @@
 ### Bot: [@MusicAnydlBot](https://t.me/MusicAnydlBot)
 
 <b align="center">
-  <img src="https://telegra.ph/file/6821d304091f7a2c8032d.jpg">
+  <img src="https://telegra.ph/file/e32b6e0ffec0534616d8e.jpg">
 </B>
 
 ### 💜 Heroku
