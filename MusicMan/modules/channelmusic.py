@@ -346,6 +346,7 @@ async def m_cb(b, cb):
 
 
 @Client.on_message(filters.command(["channelplay","cplay"])  & filters.group & ~filters.edited)
+@errors
 @authorized_users_only
 async def play(_, message: Message):
     global que
