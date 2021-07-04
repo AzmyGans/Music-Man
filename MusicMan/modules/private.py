@@ -45,14 +45,14 @@ Dikekolah oleh {OWNER}
             [
                 [
                     InlineKeyboardButton(
-                        "⚔️ Bantuan", callback_data = f"help+1"),
+                        "⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data = f"help+1"),
                     InlineKeyboardButton(
-                        "Tambahkan ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/{SUPPORT_GROUP}"), 
+                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"), 
                     InlineKeyboardButton(
-                        "Channel 📣", url=f"https://t.me/{UPDATES_CHANNEL}")
+                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ]
             ]
         ),
@@ -67,7 +67,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "💬 sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
@@ -108,16 +108,16 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton(text = '⚔️ Bantuan', callback_data = f"help+1"),
-             InlineKeyboardButton(text = 'Tambahkan ➕', url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '👥 Groyp', url=f"https://t.me/{SUPPORT_GROUP}"),
-             InlineKeyboardButton(text = 'Channel 📣', url=f"https://t.me/{UPDATES_CHANNEL}")]
+            [InlineKeyboardButton(text = '⚔️ ʙᴀɴᴛᴜᴀɴ', callback_data = f"help+1"),
+             InlineKeyboardButton(text = 'ᴛᴀᴍʙᴀʜᴋᴀɴ ➕', url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '👥 ɢʀᴏᴜᴘ', url=f"https://t.me/{SUPPORT_GROUP}"),
+             InlineKeyboardButton(text = 'ᴄʜᴀɴɴᴇʟ 📣', url=f"https://t.me/{UPDATES_CHANNEL}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '⬅️ Sebelumnya', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'Selanjutnya ➡️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '⬅️ sᴇʙᴇʟᴜᴍɴʏᴀ', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'sᴇʟᴀɴᴊᴜᴛɴʏᴀ ➡️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
@@ -130,7 +130,7 @@ async def ghelp(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🟡 Click here for help 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "🟡 Klik di sini untuk bantuan 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
                     )
                 ]
             ]
