@@ -438,7 +438,7 @@ async def m_cb(b, cb):
         await cb.answer("**Sedang Tidak Terhubung dengan VCG**", show_alert=True)
 
 
-@Client.on_message(command("ytplay") & other_filters)
+@Client.on_message(command("play") & other_filters)
 @errors
 async def play(_, message: Message):
     global que
@@ -731,7 +731,7 @@ async def play(_, message: Message):
     return await lel.delete()
 
 
-@Client.on_message(filters.command("play") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
 @errors
 async def ytplay(_, message: Message):
     global que
@@ -875,7 +875,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷 **Judul:** {title}\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎧 **Permainan:** {message.from_user.mention}",
+                    + f"🎧 **Permintaan:** {message.from_user.mention}",
                    reply_markup=keyboard,)
 
     os.remove("final.png")
