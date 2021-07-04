@@ -1,51 +1,39 @@
-<h1 align="centre">🎵 Music Anydl Bot 🎵</h1>
+<h2 align="centre">Music Anydl Bot</h2>
 
-### A bot that can play music on Telegram Group and Channel Voice Chats
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@MusicAnydlBot](https://t.me/MusicAnydlBot)
+### ☑️ Saya memiliki banyak fitur untuk anda yang suka lagu
+### 🔘 Memutar lagu di group 
+### 🔘 Mendownload lagu
+### 🔘 Mendownload video
+### 🔘 Mencari link youtube
+### 🔘 Mencari lirik lagu
 
-<h2> Features 🔥 </h2>
+<p align="center">
+  <img src="https://telegra.ph/file/6821d304091f7a2c8032d.jpg">
+</p>
 
-- Thumbnail Support
-- Playlist Support
-- Current playback support
-- Showing track names when skipping
-- Zero downtime, Fully Stable
-- Deezer,Youtube & Saavn playback support
-- Settings panel
-- Control with buttons
-- Userbot auto join
+### 🔰 Perintah
+
+### =>> Memutar Lagu 🎧
+
+- `/play` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
+- `/dplay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui deezer
+- `/splay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui jio saavn
+- `/ytplay` (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube tanpa pilihan
+
+### =>> Pemutaran ⏯
+
+- `/player`: Buka menu Pengaturan pemain
+- `/skip`: Melewati trek saat ini
+- `/pause`: Jeda trek
+- `/resume`: Melanjutkan trek yang dijeda
+- `/end`: ​​Menghentikan pemutaran media
+- `/current`: Menampilkan trek yang sedang diputar
+- `/playlist`: Menampilkan daftar putar
+
+### ☑️ Semua Perintah Bisa Digunakan Kecuali Perintah `/player /skip /pause /resume  /end` Hanya Untuk Admin Grup
 
 ## 🚀 Deployment
 
 ### 💜 Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/t03b10t99/Music-Man/tree/master)
-
-Get pyrogram (p)  `SESSION` from here:
-[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1)
-
-### Commands for Group 🛠
-#### For all in group
-
-- `/play <song name>` - play song you requested
-- `/play <reply to audio>` - play replied file
-- `/dplay <song name>` - play song you requested via deezer
-- `/splay <song name>` - play song you requested via jio saavn
-- `/playlist` - Show now playing list
-- `/current` - Show now playing
-- `/song <song name>` - download songs you want quickly
-- `/search <query>` - search videos on youtube with details
-- `/deezer <song name>` - download songs you want quickly via deezer
-- `/saavn <song name>` - download songs you want quickly via saavn
-- `/video <song name>` - download videos you want quickly
-
-#### Admins only.
-- `/player` - open music player settings panel
-- `/pause` - pause song play
-- `/resume` - resume song play
-- `/skip` - play next song
-- `/end` - stop music play
-- `/ubotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
-- `/admincache` - Refresh admin list
