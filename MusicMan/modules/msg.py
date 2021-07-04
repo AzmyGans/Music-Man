@@ -20,11 +20,11 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**👋🏻 Hai Selamat Datang Kembali Di {PROJECT_NAME}
+**👋🏻 Hai Selamat Datang Kembali Di [{PROJECT_NAME}](https://telegra.ph/file/709a795db82beb60e10fe.jpg)
 
 ⚪️ {PROJECT_NAME} Dapat Memutar Musik Di Obrolan Suara Grup Anda Serta Obrolan Suara Saluran
 
-⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\nKlik Selanjutnya Untuk Info Lebih Lanjut**
+⚪️ Assistant Name >> @{ASSISTANT_NAME}\n\n☑️ Klik Selanjutnya Untuk Info Lebih Lanjut**
 """,
 
 f"""
@@ -36,7 +36,8 @@ f"""
 • Jika Assistant Bot Bergabung Selamat Menikmati Musik, 
 • Jika Assistant Bot Tidak Bergabung Silahkan Tambahkan @{ASSISTANT_NAME} Ke Grup Anda Dan Coba Lagi
 
-**Untuk Saluran Music Play**
+**Untuk Saluran Music Play 📣**
+
 1) Jadikan Bot Sebagai Admin Saluran
 2) Kirim /userbotjoinchannel Di Grup Tertaut
 3) Sekarang Kirim Perintah Di Grup Tertaut
@@ -91,12 +92,14 @@ f"""
 """,
 f"""
 **==>>Download Lagu 📥**
+
 • /vsong [nama lagu]: Download video lagu dari youtube
 • /song [nama lagu]: Unduh audio lagu dari youtube
 • /saavn [nama lagu]: Unduh lagu dari saavn
 • /deezer [nama lagu]: Unduh lagu dari deezer
 
 **==>>Alat Pencarian 🔍**
+
 • /search [nama lagu]: Cari youtube untuk lagu
 • /lyrics [nama lagu]: Dapatkan lirik lagu
 """ ,
