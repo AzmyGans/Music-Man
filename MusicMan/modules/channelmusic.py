@@ -448,10 +448,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -505,10 +505,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -553,10 +553,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -685,10 +685,10 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(url))
@@ -813,10 +813,10 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Daftar", callback_data="playlist"),
-                    InlineKeyboardButton("Support 📖", url="https://t.me/GroupMusicRandom"),
+                    InlineKeyboardButton("📖 ᴅᴀғᴛᴀʀ", callback_data="playlist"),
+                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/GroupMusicRandom"),
                 ],
-                [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
         )
     file_path = await convert(wget.download(slink))
