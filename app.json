@@ -30,12 +30,12 @@
     "SUPPORT_GROUP": {
       "description": "Grup dukungan MusicPlayer Anda tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GB_BorutoID"
+      "value": "GroupMusicRandom"
     },
     "UPDATES_CHANNEL": {
       "description": "Updates Channel tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GroupMusicAnydl"
+      "value": "GB_BorutoID"
     }, 
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
@@ -49,7 +49,6 @@
     "OWNER": {
       "description": "Masukan Nama atau Username Telegram",
       "required": true
-      "value": "[ɢᴏᴏᴅ ʙᴏʏs](https://t.me/GB_03101999)"
     },
     "ARQ_API_KEY": {
       "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
