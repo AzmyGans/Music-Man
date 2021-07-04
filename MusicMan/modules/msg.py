@@ -50,7 +50,7 @@ f"""
 • /play (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
 • /dplay (nama lagu) - Untuk Memutar lagu yang Anda minta melalui deezer
 • /splay (nama lagu) - Untuk Memutar lagu yang Anda minta melalui jio saavn
-• /ytplay (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube dengan lebih detail
+• /ytplay (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube tanpa pilihan
 
 **=>> Pemutaran ⏯**
 
