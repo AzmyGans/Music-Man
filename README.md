@@ -2,9 +2,9 @@
 
 ### Bot: [@MusicAnydlBot](https://t.me/MusicAnydlBot)
 
-<p align="center">
+<b align="center">
   <img src="https://telegra.ph/file/6821d304091f7a2c8032d.jpg">
-</p>
+</B>
 
 ### 💜 Heroku
 
