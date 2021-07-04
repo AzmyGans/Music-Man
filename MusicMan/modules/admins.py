@@ -15,29 +15,51 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from asyncio.queues import QueueEmpty
-from MusicMan.config import que
-from pyrogram import Client, filters
+from asyncio import QueueEmpty
+from pyrogram import Client 
+from pyrogram import filters
 from pyrogram.types import Message
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
 
+from MusicMan.config import que
 from MusicMan.function.admins import set
 from MusicMan.helpers.channelmusic import get_chat_id
-from MusicMan.helpers.decorators import authorized_users_only, errors
-from MusicMan.helpers.filters import command, other_filters
+from MusicMan.helpers.decorators import authorized_users_only
+from MusicMan.helpers.decorators import errors
+from MusicMan.helpers.filters import command
+from MusicMan.helpers.filters import other_filters
 from MusicMan.services.callsmusic import callsmusic
+from MusicMan.services.queues import queues
 
 
-@Client.on_message(filters.command("adminreset"))
+@Client.on_message(filters.command("reload"))
 async def update_admin(client, message: Message):
     chat_id = get_chat_id(message.chat)
     set(
         chat_id,
-        [
+        (
             member.user
-            for member in await message.chat.get_members(filter="administrators")
-        ],
+            for member in await message.chat.get_members(
+                filter="administrators"
+            )
+        ),
     )
-    await message.reply_text("**✅️ Admin cache refreshed!**")
+
+    await message.reply_text("✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Group Support", url="https://t.me/SharingUserbot"
+                    ),
+                    InlineKeyboardButton(
+                        "Owner", url="https://t.me/mrismanaziz"
+                    )
+                ]
+            ]
+        )
+    )
 
 
 @Client.on_message(command("pause") & other_filters)
@@ -45,13 +67,13 @@ async def update_admin(client, message: Message):
 @authorized_users_only
 async def pause(_, message: Message):
     chat_id = get_chat_id(message.chat)
-    if (chat_id not in callsmusic.pytgcalls.active_calls) or (
-        callsmusic.pytgcalls.active_calls[chat_id] == "paused"
+    if (chat_id not in callsmusic.active_chats) or (
+        callsmusic.active_chats[chat_id] == "paused"
     ):
-        await message.reply_text("**❌ Tidak ada pemutaran lagu untuk dijeda**")
+        await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
     else:
-        callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("**⏸ Menjeda lagu**")
+        callsmusic.pause(chat_id)
+        await message.reply_text("▶️ **Paused!**")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -59,13 +81,13 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     chat_id = get_chat_id(message.chat)
-    if (chat_id not in callsmusic.pytgcalls.active_calls) or (
-        callsmusic.pytgcalls.active_calls[chat_id] == "playing"
+    if (chat_id not in callsmusic.active_chats) or (
+        callsmusic.active_chats[chat_id] == "playing"
     ):
-        await message.reply_text("**❌ Tidak ada lagu yang sedang dijeda**")
+        await message.reply_text("❗ **Tidak ada Lagu yang sedang dijeda!**")
     else:
-        callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("**▶️ Melanjutkan pemutaran lagu yang dijeda**")
+        callsmusic.resume(chat_id)
+        await message.reply_text("⏸ **Resumed!**")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -73,16 +95,16 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
-    if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("**❌ Tidak ada lagu yang sedang diputar**")
+    if chat_id not in callsmusic.active_chats:
+        await message.reply_text("❗ **Tidak ada Lagu yang sedang diputar!**")
     else:
         try:
-            callsmusic.queues.clear(chat_id)
+            queues.clear(chat_id)
         except QueueEmpty:
             pass
 
-        callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("**✅ Userbot telah terputus dari obrolan suara.**")
+        await callsmusic.stop(chat_id)
+        await message.reply_text("❌ **Memberhentikan Lagu!**")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -91,19 +113,24 @@ async def stop(_, message: Message):
 async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
-    if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("**❌ Tidak ada lagu di antrian untuk dilewati**")
+    if chat_id not in callsmusic.active_chats:
+        await message.reply_text("❗ **Tidak ada Lagu Selanjutnya untuk dilewati!**")
     else:
-        callsmusic.queues.task_done(chat_id)
-
-        if callsmusic.queues.is_empty(chat_id):
-            callsmusic.pytgcalls.leave_group_call(chat_id)
+        queues.task_done(chat_id)
+        if queues.is_empty(chat_id):
+            await callsmusic.stop(chat_id)
         else:
-            callsmusic.pytgcalls.change_stream(
-                chat_id, callsmusic.queues.get(chat_id)["file"]
+            await callsmusic.set_stream(
+                chat_id, 
+                queues.get(chat_id)["file"]
             )
 
-        await message.reply_text("**⏭ Anda telah melompat ke lagu berikutnya**")
+    qeue = que.get(chat_id)
+    if qeue:
+        skip = qeue.pop(0)
+    if not qeue:
+        return
+    await message.reply_text(f"- Melewati Lagu **{skip[0]}**\n- Sekarang Memutar Lagu **{qeue[0][0]}**")
 
 
 @Client.on_message(filters.command("admincache"))
@@ -111,9 +138,12 @@ async def skip(_, message: Message):
 async def admincache(client, message: Message):
     set(
         message.chat.id,
-        [
+        (
             member.user
-            for member in await message.chat.get_members(filter="administrators")
-        ],
+            for member in await message.chat.get_members(
+                filter="administrators"
+            )
+        ),
     )
-    await message.reply_text("**✅️ Daftar admin telah diperbarui**")
+
+    await message.reply_text("✅️ **Daftar admin** telah **diperbarui**")
