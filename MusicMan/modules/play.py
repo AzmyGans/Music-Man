@@ -969,7 +969,7 @@ async def deezer(client: Client, message_: Message):
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/{updateschannel}"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 ᴛᴏɴᴛᴏɴ ᴅɪ ᴅᴇᴇᴢᴇʀ 🎬", url=f"{url}"),
+                    InlineKeyboardButton(text="🎬 ᴅᴇɴɢᴀʀ ᴅɪ ᴅᴇᴇᴢᴇʀ 🎬", url=f"{url}"),
                 ],
                 [InlineKeyboardButton(text="🗑️ ᴛᴜᴛᴜᴘ 🗑️", callback_data="cls")],
             ]
